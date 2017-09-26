@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	 <!-- ICON -->
+    <link rel="icon" type="image/png" href="images/head.png">
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		body{
+			/*background from http://subtlepatterns.com/*/
+			background-image: url('images/mooning.png');
+		}
+		canvas { 
+			display: block; 
+			border-radius: 16px;
+			margin: 2em auto; 
+			background: #fff;
+			box-shadow: 0px 10px 50px #4f4f4f;
+		}
+		input{
+			height: 50px;
+			width:640px;
+			background: white;
+			border: 2px solid black;
+			border-radius: 16px;
+			font-family: Tahoma;
+			font-weight: bold;
+			text-align: center;
+			font-size: 25pt;
+			box-shadow: 0px 10px 50px #4f4f4f;
+		}
+		#logo{
+			position: absolute;
+			bottom: 0;
+			right:0;
+			opacity: 0.2;
+		}
+		.text{
+			text-align: center;
+/*			background: #fff;
+			border: 2px solid black;*/
+		}
+
+	
+	</style>
+	<title>Invasion</title>
+</head>
+<body>
+	<!--<img src="images/logo.png" alt="..." id="logo"/>-->
+	<canvas id="canvas">
+		Your browzer does not support canvas. Get a better one.
+	</canvas>
+	<div class="text">
+		<input id="killTerm" type="text" size="20" maxlength="20" />
+	</div>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/loader.js"></script>
+	<script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>D3</title>          
+    <!-- <link rel="stylesheet" type="text/css" href="css/myStyle.css"> -->
+            <!-- Load the d3.js library -->
+     <!--<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
+    <script src="d3.min.js" charset="utf-8"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+
+    <!-- Define inlined PaperScript associate it with myCanvas -->
+    </head>
+    <body>
+    <!-- d3 code will only work if the script is within the body tag. Took me about an hour and a half to figure this out. *faceplam* -->
+    <script type="text/javascript">
+
+            //basic bubble chart
+            // http://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
+
+            //Another animated bubble chart example:
+            // http://www.delimited.io/blog/2013/12/19/force-bubble-charts-in-d3
+
+            "use strict";
+
+            var diameter = 1000,
+                format = d3.format(",d"), //max size of the bubbles
+                color  = d3.scale.category20c(); //color category
+
+                var bubble = d3.layout.pack()
+                    .sort(null)
+                    .size([diameter, diameter])
+                    .padding(1.5);
+
+                var svg = d3.select("body").append("svg")
+                    .attr("width", diameter)
+                    .attr("height", diameter)
+                    .attr("class", "bubble");
+                console.log("svg element append?");
+                // I haven't worked with a csv file before. Super easy:
+                //Pros: easy to implement with d3
+                // Cons: Data is static.
+                // Data is collected from reddit.com/r/science between 12:30pm and 1:00pm
+                //This subreddit divides its links into different areas of study. 
+                // total number of data collected= 225
+                d3.csv("science_reddit_data.csv", function(error, data){
+
+                    //convert numerical values from strings to numbers
+                    data = data.map(function(d){ 
+                        d.value = +d["Number"]; return d; });
+                   
+                    console.log(data);
+                    //bubbles needs very specific format, convert data to this.
+                    var nodes = bubble.nodes({children:data}).filter(function(d) { return !d.children; });
+
+                    //setup the chart
+                    var bubbles = svg.append("g")
+                        .attr("transform", "translate(0,0)")
+                        .selectAll(".bubble")
+                        .data(nodes)
+                        .enter();
+                    //create the bubbles
+                    bubbles.append("circle")
+                        .attr("r", function(d){ return d.r; })
+                        .attr("cx", function(d){ return d.x; })
+                        .attr("cy", function(d){ return d.y; })
+                        .style("fill", function(d) { return color(d.value); });
+                    console.log(bubbles);
+
+                    //format the text for each bubble
+                    bubbles.append("text")
+                        .attr("x", function(d){ return d.x; })
+                        .attr("y", function(d){ return d.y + 5; })
+                        .attr("text-anchor", "middle")
+                        .text(function(d){ return d["Name"]; })
+                        .style({
+                            "fill":"black",
+                            "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
+                            "font-size": "11px"
+                        });
+                })
+
+        </script>
+
+    </body>
+</html>

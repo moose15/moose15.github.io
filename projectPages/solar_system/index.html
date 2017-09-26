@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Solar System</title>          
+    <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+            <!-- Load the Paper.js library -->
+     <script type="text/javascript" src="js/paper-full.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Define inlined PaperScript associate it with myCanvas -->
+    <script type="text/paperscript" canvas="canvas">
+
+        // get object to circle another object
+        // http://stackoverflow.com/questions/29615132/animating-multiple-items-in-paper-js-while-anchored-to-a-path
+
+        // get planet to follow path 
+       // http://stackoverflow.com/questions/12295072/paper-js-animation-along-a-path
+
+        "use strict";
+
+        var PATH_COLOR= 'grey';
+        var offset = 0;
+
+        var mercury;
+        var mercuryPath;
+        var mercuryRadius = 5;
+        var mercuryPathRadius= 60;
+        var mercurySpeed = 2;
+
+        var venus;
+        var venusPath;
+        var venusRadius = 7;
+        var venusPathRadius= 75;
+        var venusSpeed = 1.5;
+
+        var earth;
+        var earthPath;
+        var earthRadius = 7;
+        var earthPathRadius= 90;
+        var earthSpeed = 1;
+
+        var mars;
+        var marsPath;
+        var marsRadius = 5;
+        var marsPathRadius= 105;
+        var marsSpeed = 0.9;
+
+        var jupiter;
+        var jupiterPath;
+        var jupiterRadius = 15;
+        var jupiterPathRadius= 150;
+        var jupiterSpeed = 0.7;
+
+        var saturn;
+        var saturnPath;
+        var saturnRadius = 12;
+        var saturnPathRadius= 180;
+        var saturnSpeed = 0.6;
+
+        var neptune;
+        var neptunePath;
+        var neptuneRadius = 10;
+        var neptunePathRadius= 220;
+        var neptuneSpeed = 0.3;
+
+        var uranus;
+        var uranusPath;
+        var uranusRadius = 10;
+        var uranusPathRadius= 200;
+        var uranusSpeed = 0.5;
+
+        var i=0;
+
+
+        //DRAW STARS
+        var count = 150;
+
+        // Create a symbol, which we will use to place instances of later:
+        var path = new Path.Circle({
+            center: [0, 0],
+            radius: 3,
+            fillColor: 'white',
+            strokeColor: 'black'
+        });
+
+
+       var symbol = new Symbol(path);
+
+        // Place the instances of the symbol:
+        for (var i = 0; i < count; i++) {
+            // The center position is a random point in the view:
+            var center = Point.random() * view.size;
+            var placedSymbol = symbol.place(center);
+            placedSymbol.scale(i / count);
+        }
+        
+
+        // Draw planets
+        //THE SUN
+        var theSun = new Path.Circle(paper.view.center, 50);
+        theSun.fillColor= '#ffeb43';
+
+        mercuryPath = createPath(mercuryPathRadius);
+        mercury = drawPlanet(mercuryPath,mercuryRadius,'#ff5454', null);
+
+        venusPath = createPath(venusPathRadius);
+        venus = drawPlanet(venusPath,venusRadius,'#ffe1ac', null);
+
+        earthPath = createPath(earthPathRadius);
+        earth = drawPlanet(earthPath,earthRadius,'#2196F3', null);
+
+        marsPath = createPath(marsPathRadius);
+        mars = drawPlanet(marsPath,marsRadius,'#eb321a', null);
+
+        jupiterPath = createPath(jupiterPathRadius);
+        jupiter= drawPlanet(jupiterPath,jupiterRadius,'#ffb244', null);
+
+        saturnPath = createPath(saturnPathRadius);
+        saturn= drawPlanet(saturnPath,saturnRadius,'#ffdeb0', null);
+
+        uranusPath = createPath(uranusPathRadius);
+        uranus= drawPlanet(uranusPath,uranusRadius,'#00fcff', null);
+
+        neptunePath = createPath(neptunePathRadius);
+        neptune= drawPlanet(neptunePath,neptuneRadius,'#2196F3', null);
+
+        function onFrame(event) {
+            // start animations
+           mercury.rotate(mercurySpeed,mercuryPath.position);
+           venus.rotate(venusSpeed,venusPath.position);
+           earth.rotate(earthSpeed,earthPath.position);
+           mars.rotate(marsSpeed,marsPath.position);
+           jupiter.rotate(jupiterSpeed,jupiterPath.position);
+           saturn.rotate(saturnSpeed,saturnPath.position);
+           neptune.rotate(neptuneSpeed,neptunePath.position);
+           uranus.rotate(uranusSpeed,uranusPath.position);
+        
+            i++;
+        }
+        //create the path of the planets
+        function createPath(pathRadius){
+            var planetPath = new Path.Circle(paper.view.center, pathRadius);
+
+            return planetPath;
+        }
+        //draw the planets
+        function drawPlanet(planetPath,planetRadius,fill,stroke){
+
+            var planet = new Path.Circle((planetPath.position-planetPath.bounds.width/2+planetRadius), planetRadius);
+            planet.fillColor = fill;
+            planet.strokeColor = stroke;
+
+            return planet;
+        }
+
+    </script>
+    </head>
+<body>
+
+        <canvas id="canvas" resize hidpi="off"></canvas>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	 <!-- ICON -->
+    <link rel="icon" type="images/png" href="images2/mug.png">
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		body{
+			background-image: url('images/mooning.png');
+		}
+		canvas { 
+			display: block; 
+			background: #fff;
+			margin: 2em auto; 
+			box-shadow: 0px 10px 50px #4f4f4f;
+		}
+		input{
+			height: 50px;
+			width:640px;
+			background: white;
+			border: 2px solid black;
+			border-radius: 16px;
+			font-family: Tahoma;
+			font-weight: bold;
+			text-align: center;
+			font-size: 25pt;
+			box-shadow: 0px 10px 50px #4f4f4f;
+		}
+		#logo{
+			position: absolute;
+			bottom: 0;
+			right:0;
+			opacity: 0.2;
+		}
+		.text{
+			text-align: center;
+		}
+
+		.content{
+			position: absolute;
+			width:100%;
+			z-index: 100;
+			top:600px;
+		}
+		.ing{
+			margin:0 auto;
+			width:900px;
+		}
+		.ing ul{
+			text-align: center;
+		}
+		.ing ul li{
+			text-decoration: none;
+			display: inline-block;
+			cursor: pointer;
+			padding: 0 5px;
+		}
+		#milkFoam{
+			height:100px;
+			width:100px;
+
+		}
+		#whippedCream{
+			width:120px;
+		}
+		.btns{
+			margin:0 auto;
+			width:1100px;
+		}
+		.btns ul{
+			text-align: center;
+		}
+		.btns ul li{
+			text-decoration: none;
+			display: inline-block;
+			cursor: pointer;
+			padding: 0 15px;
+		}
+		.btns li img{
+			height:120px;
+			width:75px;
+		}
+		.submit{
+			position: absolute;
+
+			width:100%;
+			top:325px;
+			z-index:100;
+		}
+		.subBtn{
+			margin:0 auto;
+			width:900px;
+
+		}
+		.subBtn img{
+			position: relative;
+			cursor: pointer;
+			left:800px;
+			
+		}
+		.timer{
+			position: absolute;
+			width:100%;
+			z-index: 100;
+			top:50px;
+		}
+		.insideTimer{
+			margin:0 auto;
+			width:900px;
+		}
+		#ti{
+			text-align: center;
+			
+		}
+		.hidebutton{
+			display:none;
+		}
+		.showbutton{
+			display: inline;
+		}
+	</style>
+	<title>So you want to be a barista?</title>
+</head>
+<body>
+		<canvas id="canvas">
+			Your browzer does not support canvas. Get a better one.
+		</canvas>
+		<div class="submit">
+			<div class="subBtn">
+				<img id="done" src="images2/orderUpBtn.png" alt="doneBtn"/>
+			</div>
+		</div>
+	<div class="timer">
+		<div class="insideTimer">
+			<div id ="ti"></div>
+		</div>
+	</div>
+	<div class="content">
+		<div class = "ing">
+			<ul>
+				<li><img id="play" src="images2/playBtn.png" alt="playBtn"></li>
+				<li><img id="playAgain" src="images2/playAgainBtn.png" alt="playAgainBtn"></li>
+			</ul>
+		</div>
+		<div class="btns">
+			<ul>
+				<li><img id="espresso" src="images2/espressoBtn.png" alt="espressoBtn"/></li>
+				<li><img id="water" src="images2/waterBtn.png" alt="waterBtn"/></li>
+				<li><img id="caramel" src="images2/caramelBtn.png" alt="caramelBtn"/></li>
+				<li><img id="chocolate" src="images2/chocolateBtn.png" alt="chocolateBtn"/></li>
+				<li><img id="steamedMilk" src="images2/steamedMilkBtn2.png" alt="steamedMilkBtn"/></li>
+				<li><img id="whiskey"  src="images2/whiskeyBtn.png" alt="whiskeyBtn"/></li>
+				<li><img id="whippedCream" src="images2/whippedcreamBtn.png" alt="whippedCreamBtn"/></li>
+				<li><img id="milkFoam" src="images2/milkFoamBtn.png" alt="milkFoamBtn"/></li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/loader.js"></script>
+	<script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
+</body>
+</html>
+
+<!--Background music and  “Incorrect sound” : From the imovie sounds on my mac.-->
+<!--“Correct sound” (Ding!): from https://www.youtube.com/watch?v=FgcB7Lkvp44-->
+<!--Background image from: https://c1.staticflickr.com/5/4051/4528472655_7eb7e9aae1_z.jpg-->
+<!--Corkboard image from: Google image search. (I can’t find the link to it).-->
+<!--Gray background texture : http://subtlepatterns.com/-->

@@ -1,0 +1,430 @@
+*{margin:0;padding:0;}
+
+body{
+  background-image:url('../images/purty_wood.png');
+}
+a:hover{
+
+  text-decoration: none;
+
+}
+a{
+  position: relative;
+  z-index: 999;
+}
+
+
+.floatRight{
+float:right;
+
+}
+.floatLeft{
+float:left;
+
+}
+/*#content{
+   z-index: 1000;
+  position: absolute;
+ 
+}*/
+.content{
+  position: relative;
+  top:50px;
+  margin-bottom:50px; 
+}
+.container{
+  padding-left:25px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+}
+.colorContainer{
+
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+/******
+CANVAS
+*******/
+canvas{
+  position: absolute;
+
+  z-index: 1;
+  top:0;
+  left:0;
+
+}
+/*********
+LOADER
+http://codepen.io/Sirop/pen/AvHqK
+**********/
+#loadScreen{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    z-index: 9999;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+.loader {
+    /*position: fixed;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*z-index: 9999;*/
+    /*background: url('../images/ajax-loader.gif') 50% 50% no-repeat rgb(249,249,249);*/
+  width:100px;
+  height:100px;
+  margin:auto;
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;
+  border-radius:50%;
+  border-bottom:15px solid transparent;
+  border-top:   15px solid transparent;
+  border-right: 15px solid #fff;
+  border-left:  15px solid #fff;
+  -webkit-animation: rotate360 1s infinite linear;
+  -moz-animation: rotate360 1s infinite linear;
+  -o-animation: rotate360 1s infinite linear;
+  animation:rotate360 1s linear infinite;
+}
+
+@-webkit-keyframes rotate360{
+    0%{
+      -webkit-transform: rotate(0deg);
+    }
+    100%{
+      -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes rotate360{
+    0%{
+      -moz-transform: rotate(0deg);
+    }
+    100%{
+      -moz-transform: rotate(360deg);
+    }
+}
+@-o-keyframes rotate360{
+    0%{
+      -o-transform: rotate(0deg);
+    }
+    100%{
+      -o-transform: rotate(360deg);
+    }
+}
+@keyframes rotate360 {
+  100% {transform:rotate(360deg);}
+}
+
+/*******
+
+NAV
+********/
+
+#navigation{
+  min-width: 700px;
+  
+}
+#navigation ul {
+    list-style-type: none;
+    /*width: 99%;*/
+    height:53px;
+    overflow: hidden;
+
+}
+
+
+#navigation li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    margin:2px;
+    font-size: 12pt;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+}
+
+.buttons:hover {
+    text-decoration: none;
+    color:black;
+    border-bottom: 1px solid #00ACFF;
+
+}
+
+.active {
+    border-bottom: 1px solid #00ACFF;
+}
+
+.title{
+
+padding-right: 16px;
+padding-left: 0;
+z-index: 1000;
+position: absolute;
+margin-top:10px;
+width: 240px;
+color:black;
+letter-spacing: 1px;
+font-family: 'Pacifico', cursive;
+
+}
+
+/********
+PROJECTs
+*********/
+#projects{
+    /*background-color: rgba(255,255,255,0.8);*/
+}
+.grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 0em 0 0em;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  min-width:30%;
+  max-width: 35%;
+  max-height: 360px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  margin-top:10px;
+   margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  font-family: 'Quicksand', sans-serif;
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+font-family: 'Quicksand', sans-serif;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 60.5%;
+}
+
+/*---------------*/
+/***** Bubba *****/
+/*---------------*/
+
+figure.effect-bubba {
+
+/*background: #3085a3;*/
+}
+
+figure.effect-bubba img {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+  opacity: 0.1;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+/*  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+/*  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;*/
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+  color: black;
+  padding-top: 5%;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,-20px,0);
+  transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba p {
+  color: black;
+  padding: 3% 2.5em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+@media screen and (max-width: 50em) {
+  .content {
+    padding: 0 0px;
+    /*text-align: center;*/
+  }
+  .grid figure {
+    /*display: inline-block;*/
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .grid figure h2 {
+    font-size: 1em;
+
+  }
+  .grid figure p {
+    font-size: 0.2em;
+  }
+
+}
+
+/*******
+ PROJECT PAGES
+********/
+#projectDescription{
+  padding:0;
+}
+#projectDescription p , h1, .moreProjects,footer{
+  
+  font-family: 'Quicksand', sans-serif;
+
+}
+#projectDescription p{
+  font-size: 14pt;
+  margin-top: 15px;
+}
+#projectDescription h1{
+  font-weight: bold;
+}
+#projectDescription iframe,#projectDescription img, #projectPhotos img{
+  width:100%;
+  padding-top: 72px;
+}
+
+.bold{
+  font-weight: bold;
+}
+/*******
+FOOTER
+*******/
+
+.moreProjects{
+  font-size: 15pt;
+  margin-top: 15px;
+  text-align: center;
+
+}
+footer{
+  /*height:100px;*/
+  margin: 25px 0;
+  font-size: 8pt;
+  text-align: center;
+   z-index: 1000;
+}
+footer p{
+  width:150px;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+footer ul li{
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0 9px;
+}
+
+footer img{
+  width:25px;
+}
+

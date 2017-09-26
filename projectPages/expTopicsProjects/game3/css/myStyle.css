@@ -1,0 +1,173 @@
+*{margin:0;padding:0;}
+
+body{
+color:white;
+font-family: 'Montserrat', sans-serif;
+}
+h1{
+	color:white;
+
+}
+span{
+	font-style: italic;
+}
+ul li{
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	display: inline;
+	margin:10px;
+	padding: 10px;
+}
+
+.button{
+	border: 2px solid #333;
+	padding: 5px 5px;
+	border-radius: 14px;
+	/*height:50px;*/
+	background-color: #ffc33c;
+	color: #333;
+	width:200px;
+	margin: 0 auto;
+	/*margin: 10px;*/
+}
+
+.button:hover{
+	background-color: #fdcd74;
+	color: #333;
+	cursor: pointer;
+
+}
+#thumbs_up {
+	width:200px;
+	margin:30px;
+	display: none;
+}
+#canvas,#destCanvas,#destCanvas2{
+	/*border: 2px solid grey;*/
+	background-color: white;
+	margin-top:30px;
+	/*box-shadow: 10px 10px 5px #888888;*/
+}
+#canvas:hover{
+	cursor: crosshair;
+}
+#destCanvas:hover{
+	cursor: crosshair;
+}
+#destCanvas2:hover{
+	cursor: crosshair;
+}
+.draw{
+	width: 40%;
+	height:650px;
+	margin: 0 auto;
+}
+.draw2{
+	width: 40%;
+	height:650px;
+	margin-right:65px;
+
+	float:right;
+}
+
+#comparison{
+	width: 40%;
+	margin:10px;
+	padding: 10px;
+}
+
+.hideme{
+	padding: 100px 50px;
+	font-size: 35pt;
+	margin: 50px;
+	opacity: 0;
+}
+
+.align-right{
+	text-align: right;
+
+}
+.float-right{
+	float:right;
+}
+.align-center{
+	text-align: center;
+}
+
+.extraPadding{
+	padding:200px 0px;
+}
+#paintAssignment{
+	background-color: #fbe2b4;
+}
+
+#word_1{
+	height:1000px;
+	background-color: #ffc33c;
+}
+#word_2{
+	height:1000px;
+	background-color: #59c4c5;
+}
+#word_3{
+	color:white;
+	background-color: #04819E;
+}
+#word_4{
+	color:white;
+	background-color: #263538;
+}
+#word_5{
+	color:white;
+	background-color: #30383a;
+}
+#word_6, #word_9{
+	color:white;
+	background-color: #161616;
+}
+#word_7{
+	color: white;
+	background-color: #938b7a;
+}
+#word_8{
+	color:white;
+	background-color: #1B3439;
+}
+#word_10{
+	color:white;
+	background-color: #686662;
+}
+#word_11{
+	color:white;
+	background-color: #414141;
+}
+#word_12{
+	color:white;
+	background-color: #98896d;
+}
+#badThoughts{
+	color:white;
+	background-color: #37393a;
+}
+#goodThoughts{
+	background-color: #fbe2b4;
+}
+.thoughts{
+	background-color: white;
+}
+#otherStudentPaintings{
+	/*background-color: #21849B;*/
+	background-color: #00c8f8;
+}
+#whatOthersReallySee{
+	background-color: #ffc33c;
+}
+.color-box{
+	position: relative;
+	border: 2px solid white;
+	padding: 5px 5px;
+	border-radius: 14px;
+	height:50px;
+	width:50px;
+	margin: 10px;
+}

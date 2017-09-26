@@ -1,0 +1,161 @@
+/*// Author: Katie Pustolski
+// Last Edited: 11/25/13
+// Project 2: Weather app
+// Rich Media Web App Dev. */
+*{margin:0; padding:0;}
+body{
+	width:100%;
+	overflow: hidden;
+	background: #6b92b9;
+	font-family: 'Raleway', sans-serif;
+	color:white;
+}
+canvas{
+	display:block;
+	position: absolute;
+}
+
+hr{
+	width:200px;
+}
+
+#search{
+
+	z-index: 1;
+	position: absolute;
+	padding:1em 2em;
+
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+#search h1{
+	font-size: 23pt;
+}
+
+#content{
+	position: absolute;
+	opacity:0;
+	padding:2em;
+	transition: 1.0s all;
+	transition-delay: 0.5s;
+
+}
+#content h1{
+	font-size: 50pt;
+	padding-bottom: 0.5em;
+}
+#content h2{
+	font-size: 17pt;
+
+}
+#content .loaded{
+	opacity: 1.0;
+
+}
+.loaded #content{
+ 	opacity:1.0;
+ }
+ .icons img{
+ 	padding:1em 1em 1em 0;
+ 	opacity: 0.5;
+ 	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+ }
+ .icons img:hover{
+ 	cursor: pointer;
+ 	opacity: 1;
+ }
+ #googleMap{
+
+	z-index: 1;
+	padding:1em 1em 1em 1em;
+	position: absolute;
+	bottom:0;
+	left:0;
+
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+ #googleMap img{
+ 	cursor: pointer;
+ 	opacity: 0.5;
+ 	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+ }
+
+ #googleMap img:hover{
+ 	cursor: pointer;
+ 	opacity: 1;
+ }
+ #getbutton{
+ 	border-radius: 10px;
+ 	background-color: #6b92b9;
+ 	color:white;
+ 	cursor: pointer;
+ 	width:60px;
+ 	height:40px;
+ 	border: 2px solid white;
+ 	font-size: 20px;
+ 	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+
+ }
+ #searchterm{
+ 	margin:1em 0em;
+ 	padding:5px;
+ 	color:white;
+ 	height:30px;
+ 	font-size: 20px;
+ 	border-radius: 10px;
+ 	border: 2px solid white;
+ 	background:none;
+
+ }
+ #getbutton:hover{
+ 	background-color: white;
+ 	color:#6b92b9;
+ }
+ #map
+ {
+ 	z-index: 2;
+ 	width:35%;
+ 	height:100%;
+ 	opacity: 0;
+ 	position: absolute;
+ 	right:0;
+ }
+ /***********************
+	PLAYING WITH @MEDIA
+************************/
+@media (max-width: 47.95em) {
+
+
+    #content h1{
+    	font-size: 25pt;
+    	padding-bottom: 0.5em;
+    }
+    
+     #getbutton:hover{
+     	background-color: white;
+     	color:#6b92b9;
+     }
+     #map
+    {
+    	z-index: 2;
+    	width:93.5%;
+    	height:10%;
+    	opacity: 0;
+    	bottom:5em;
+    	position: absolute;
+    	left:1em;
+     }
+     #search h1{
+    	font-size: 23pt;
+    	top:15em;
+    }
+}

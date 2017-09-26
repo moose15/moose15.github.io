@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Impostor Syndrome Simulator</title>
+        <!--MY CSS-->
+        <link href="css/myStyle.css" rel="stylesheet">
+         <link href="colorPicker/css/colpick.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- GOOGLE FONT -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Oswald:400,700' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+        <!-- CONTENT -->
+        <div id="text_1" class="section">
+            <div class="container">
+
+            </div>
+        </div>
+        <div id="paintAssignment" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>Your assignment is to paint a replica of Leonardo da Vinci’s <span>Mona Lisa</span>. Go ahead!</h1>
+                </div>
+                <div class="draw">
+                    <canvas id="canvas">Your browzer does not support HTML5 Canvas. Try Chrome or Firefox</canvas>
+                    <!-- The color picker website I got this from is not active anymore -->
+                    <div class="color-box float-right">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="word_1" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>Done? Great! Turn it in!</h1>
+                    <div id="submit" class="button">Turn in</div>
+                    <!-- http://iconmonstr.com/ -->
+                    <img id="thumbs_up" src="images/thumbs_up.png" alt="..."/>
+                </div>
+            </div>
+        </div>
+        <div id="word_2" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>Let's see how the rest of the class did.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="otherStudentPaintings" class="extraPadding">
+            <div class="container">
+                <!-- https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg -->
+                <ul>
+                    <li><img src="images/Mona_Lisa.jpg"></li>
+                    <li><img src="images/Mona_Lisa.jpg" ></li>
+                    <li><img src="images/Mona_Lisa.jpg" ></li>
+                    <li><img src="images/Mona_Lisa.jpg" ></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Mona_Lisa.jpg"></li>
+                    <li><img src="images/Mona_Lisa.jpg" ></li>
+                    <li><img src="images/Mona_Lisa.jpg" ></li>
+                    <li><img src="images/Mona_Lisa.jpg" ></li>
+                </ul>
+                <img id="comparison" src="images/Mona_Lisa.jpg">
+                <div class="draw2">
+                    <canvas id="destCanvas">Your browzer does not support HTML5 Canvas. Try Chrome or Firefox</canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="word_3" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>Oh...</h1>
+                </div>
+            </div>
+        </div>
+        <div id="word_8" class="extraPadding words">
+            <div class="container">
+                <div class="align-center">
+                    <h1>they look...great...</h1>
+                </div>
+            </div>
+        </div>
+        <div id="word_4" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>...</h1>
+                </div>
+            </div>
+        </div>
+        <div id="word_5" class="extraPadding words">
+            <div class="container">
+                <div class="align-center">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+        <div id="badThoughts" class="thoughts">
+            <div class="container">
+                    <div class="hideme extraPadding align-right">Why am I here?</div>
+                    <div class="hideme extraPadding">Admissions made a mistake</div>
+                    <div class="hideme extraPadding align-right">I got here by sheer dumb luck</div>
+                     <div class="hideme extraPadding  ">I don't even compare</div>
+                    <div class="hideme extraPadding align-right" >Why even bother?</div>
+                    <div class="hideme extraPadding ">I'm an impostor</div>
+            </div>
+        </div>
+         <div id="word_6" class="extraPadding words">
+            <div class="container">
+                <div class="align-center">
+                    <h1>...</h1>
+                </div>
+            </div>
+        </div>
+        <div id="word_9" class="extraPadding words">
+            <div class="container">
+                <div class="align-center">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+        <div id = "word_7" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>Do you want to know how others see your work?</h1>
+                </div>
+            </div>
+        </div>
+        <div id="whatOthersReallySee" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <img src="images/Mona_Lisa.jpg" alt="mona" width= "40%"/>
+                </div>
+            </div>
+        </div>
+        <div id= "goodThoughts" class="thoughts">
+            <div class="container">
+                    <div class="hideme extraPadding align-right">Wow!</div>
+                    <div class="hideme extraPadding">Great work!</div>
+                    <div class="hideme extraPadding align-right">Fantastic!</div>
+                    <div class="hideme extraPadding">This looks awesome!</div>
+                    <div class="hideme extraPadding align-right">Stunning.</div>
+                    <div class="hideme extraPadding">You are very talented!</div>
+            </div>
+        </div>
+
+        <div id = "word_12" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>But, even with all this praise,</h1>
+                </div>
+            </div>
+        </div>
+        <div id = "word_10" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>you still feel</h1>
+                </div>
+            </div>
+        </div>
+        <div id = "word_11" class="extraPadding">
+            <div class="container">
+                <div class="align-center">
+                    <h1>not good enough</h1>
+                    <div class="draw">
+                        <canvas id="destCanvas2">Your browzer does not support HTML5 Canvas. Try Chrome or Firefox</canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- MY JS -->
+        <script src="js/script.js"></script>
+        <script src="js/scrollWords.js"></script>
+        <script src="colorPicker/js/colpick.js" type="text/javascript"></script>
+    </body>
+
+</html>

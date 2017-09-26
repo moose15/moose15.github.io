@@ -1,0 +1,480 @@
+/**************
+	GENERAL
+*************/
+
+* { padding: 0; margin: 0; }
+
+body{
+  background-color:#EBEBEB;
+}
+
+h1{
+	padding:50px 0px 25px 0;
+	font-size: 50pt;
+}
+
+h2,h3,h4,a{
+   text-align: center;
+}
+
+span{
+	font-weight: bold;
+}
+
+div#background-image{
+	top:0;
+	width:100%;
+	height:60%;
+
+}
+
+hr{
+  width:50%;
+  margin: 0 auto;
+  border-top:1px solid lightgrey; 
+}
+#canvas{
+  z-index: -10;
+}
+
+.hide{
+	display: none;
+}
+.float-left {
+    float:left;
+}
+.float-right {
+    float:right;
+}
+
+/********
+CANVAS
+********/
+
+#canvas{
+  z-index: -10;
+}
+/***********
+  TITLE
+**************/
+#main-title {
+  position: absolute;
+  width:100%;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  color:white;
+  text-align: center;
+  top: 20%;
+  padding:10px 40px;
+}
+
+#main-title img{
+
+    text-align: center;
+}
+/*********
+LOADER
+http://codepen.io/Sirop/pen/AvHqK
+**********/
+#loadScreen{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    z-index: 9999;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+.loader {
+    /*position: fixed;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*z-index: 9999;*/
+    /*background: url('../images/ajax-loader.gif') 50% 50% no-repeat rgb(249,249,249);*/
+  width:100px;
+  height:100px;
+  margin:auto;
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;
+  border-radius:50%;
+  border-bottom:15px solid transparent;
+  border-top:   15px solid transparent;
+  border-right: 15px solid #fff;
+  border-left:  15px solid #fff;
+  -webkit-animation: rotate360 1s infinite linear;
+  -moz-animation: rotate360 1s infinite linear;
+  -o-animation: rotate360 1s infinite linear;
+  animation:rotate360 1s linear infinite;
+}
+
+@-webkit-keyframes rotate360{
+    0%{
+      -webkit-transform: rotate(0deg);
+    }
+    100%{
+      -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes rotate360{
+    0%{
+      -moz-transform: rotate(0deg);
+    }
+    100%{
+      -moz-transform: rotate(360deg);
+    }
+}
+@-o-keyframes rotate360{
+    0%{
+      -o-transform: rotate(0deg);
+    }
+    100%{
+      -o-transform: rotate(360deg);
+    }
+}
+@keyframes rotate360 {
+  100% {transform:rotate(360deg);}
+}
+
+/**********
+	NAV-BAR
+**********/
+.navbar-default{
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+	background-color:none;
+  color:white;
+	border:none;
+	padding:0 0;
+  font-weight: bold;
+  font-size: 13pt;
+
+}
+
+.navbar-brand img{
+	height: 100%;
+	top:0;
+  margin:0 10px 0 0;
+
+}
+.navbar-brand a:hover{
+  opacity: 0.9;
+
+}
+.projPageNav{
+  background-color:rgba(26, 26, 26, .95);
+}
+/**************
+	SECTION
+**************/
+div.section{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*****************
+	TOP OF PAGE
+********************/
+div#top{
+  top:0;
+	width:100%;
+	background-repeat:no-repeat;
+
+}
+div#top .background{
+  z-index: -1;
+  position: absolute;
+  top:-100px;
+  overflow: hidden;
+  width:100%;
+  min-height:450px;
+}
+
+/***********
+ABOUT
+************/
+
+#about,#moreProjects{
+  width:100%;
+  background: rgba(20, 20, 20, 1);
+  padding: 2em 0;
+
+
+}
+#about h2
+{
+ color:white;
+}
+#about p{
+  
+  color:white;
+  font-size: 10pt;
+
+
+}
+#about a{
+	  color:white;
+}
+#about .container{
+    padding:1em 0;
+}
+#about .des{
+  padding:0 2em;
+}
+#about .des img{
+  border-radius: 5px;
+  margin-right: 2em;
+  float:left;
+
+}
+#about ul li{
+  display: block;
+  color:white;
+  text-decoration: none;
+  padding-top:1em;
+    
+}
+
+#about ul li img{
+  padding-right:5px;
+  height:25px;
+  width:30px;
+
+}
+#about a:hover, li:hover{
+  opacity:0.7;
+  text-decoration: none;
+}
+#about ul{
+  padding-right: 115px;
+  color: white;
+  font-size: 15px;
+  float:right;
+  position: relative;
+  padding-top: 1em;
+  padding-bottom: 10em;
+  padding-left: 2em;
+  text-align: left;
+}
+
+#about .des img{
+  opacity: 1;
+}
+
+#whoAmI{
+  text-align: left;
+}
+/***********
+Project list
+*************/
+.proj {
+  color:black;
+  font-size: 12pt;
+  font-weight: bold;
+
+}
+
+.description img{
+  width:100%;
+  margin-top: 1em;
+  margin-right: 1em;
+
+}
+.description{
+    padding-bottom: 3em;
+
+}
+
+#games ul{
+    width:100%;
+    text-align: center;
+}
+#games ul li{
+    width:70%;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top:1em;
+    cursor: pointer;
+}
+#projects{
+    background-color: #EBEBEB;
+}
+#projects h1{
+  padding:0 0.5em;
+  color: black;
+
+}
+
+#projects h2{
+    padding:0 15px;
+  color: black;
+}
+#projects .row{
+    padding: 2em 0;
+}
+#projects .container{
+  padding-top: 1em;
+}
+
+.pictures{
+  text-align: center;
+  padding: 1em 0;
+  background: none;
+
+}
+.pictures img{
+    width:370px;
+    height: 250px;
+    border-radius: 5px;
+
+}
+/*HOVER EFFECT FROM http://thecodeplayer.com/walkthrough/jquery-css3-lightbox-tutorial*/
+.pictures ul {
+  overflow: hidden;
+
+}
+.pictures ul li {
+  margin:5px 5px 5px 5px ;
+  list-style-type: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*Image titles*/
+.pictures .image_title {
+  width:370px;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.pictures .title {
+  color: #EBEBEB;;
+  text-transform: uppercase;
+  margin-top:1em;
+  text-align: center;
+  vertical-align: middle;
+  /*Hover effect - default state*/
+  transform: scale(0.2);
+  transition: all 0.2s;
+}
+.pictures .description{
+
+  color: #EBEBEB;;
+  font-size: 14pt;
+  margin-top:1em;
+  padding:0 1em;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.2s;
+}
+
+.pictures li:hover .image_title {
+  opacity: 1;
+}
+.pictures li:hover .title {
+  transform: scale(1);
+}
+
+/******************
+	PROJECT PAGES
+*****************/
+
+.info p{
+  float:left;
+  padding:0 0 10px 0;
+  font-weight: bold;
+}
+
+.project-image img{
+    width:700px;
+    height:400px;
+}
+
+.project-description, .project-pics{
+    padding:3px 5px;
+    width:80%;
+
+
+}
+.project-snippit {
+    text-align: left;
+    width:100%;
+    height:100px;
+    
+    opacity: 0;
+    z-index:100;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+.project-snippit:hover{
+       background: rgba(20, 20, 20, 1);
+      opacity: 0.8;
+      color:white;
+}
+/**************
+  CONTACT
+***************/
+
+#email{
+  font-family: 'Courgette', cursive;
+  color: white;
+  opacity:1;
+
+}
+/******************
+	FOOTER
+*******************/
+footer {
+	background: rgba(26, 26, 26, 1);
+    margin-right: auto;
+    margin-left: auto;
+    padding:2em;
+    text-align: center;
+    color:#BDBDBD;
+    font-size: 10px;
+    bottom: 0;
+}
+
+/*************
+  @MEDIA
+**********/
+
+@media screen and (max-width: 1199px){
+
+  div.des p, .des h2{
+  	float:none;
+  	width:none;
+    padding: 20px 0 0 0;
+
+  }
+  #about ul li{
+    display: inline-block;
+    padding: 0 20px 20px 0;
+      
+  }
+
+  #about ul{
+    bottom:0;
+    padding: 35px 0 0 0;
+    float: none;
+    text-align: center;
+  }
+
+  #projects h2{
+    text-align: center;
+  }
+  #main-title img{
+      size:50%;
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>D3</title>          
+    <!-- <link rel="stylesheet" type="text/css" href="css/myStyle.css"> -->
+            <!-- Load the d3.js library -->
+     <!--<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
+    <script src="d3.min.js" charset="utf-8"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+
+    <!-- Define inlined PaperScript associate it with myCanvas -->
+    </head>
+    <body>
+    <!-- d3 code will only work if the script is within the body tag. Took me about an hour and a half to figure this out. *faceplam* -->
+ <script type="text/javascript">
+          
+      "use strict";
+            //basic bubble chart
+            // http://jrue.github.io/coding/2014/exercises/basicbubblepackchart/
+
+            //Another animated bubble chart example:
+            // http://www.delimited.io/blog/2013/12/19/force-bubble-charts-in-d3
+
+            // collision detection:
+            // http://bl.ocks.org/mbostock/3231298
+            "use strict";
+            var width = 960,
+                height = 500,
+                diameter = 1000;
+            var nodes;
+            var root;
+            var color = d3.scale.category10();
+
+            var bubble = d3.layout.pack()
+              .sort(null)
+              .size([diameter, diameter])
+              .padding(1.5);
+
+             var svg = d3.select("body").append("svg")
+                    .attr("width", diameter)
+                    .attr("height", diameter)
+                    .attr("class", "bubble");
+
+            d3.csv("science_reddit_data.csv", function(error, data){
+
+                                    //convert numerical values from strings to numbers
+                data = data.map(function(d){
+                  d.value = +d["Number"]; return d;
+                  
+
+                });
+                console.log(data);
+                //var nodes = bubble.nodes({children:data}).filter(function(d) { return !d.children; });
+                nodes = svg.selectAll("g.node")
+                        .data(bubble.nodes({children:data})
+                        .filter(function(d) { return !d.children; }))
+                        .enter().append("g")
+                        .attr("class", "node");
+                        // .attr("transform", "translate(0,0)");
+
+                nodes.append("circle")
+                        .attr("r", function(d){ return d.r; })
+                        .attr("cx", function(d){ return d.x; })
+                        .attr("cy", function(d){ return d.y; })
+                        .style("fill", function(d) { return color(d.value); })
+             //format the text for each bubble
+                nodes.append("text")
+                    .attr("x", function(d){ return d.x; })
+                    .attr("y", function(d){ return d.y + 5; })
+                    .attr("text-anchor", "middle")
+                    .text(function(d){ return d["Name"]; })
+                    .style({
+                        "fill":"black",
+                        "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
+                        "font-size": "11px"
+                    });
+                    console.log("nodes: "+ nodes[0]);
+                root = data[0];
+                root.radius = 5;
+                root.fixed = true;
+               var force = d3.layout.force()
+                    .gravity(0.05)
+                    .charge(function(d, i) { return i ? 0 : -2000; })
+                    .nodes(data)
+                    .size([diameter, diameter]);
+
+                force.start();
+               
+                force.on("tick", function(e) {
+                  var q = d3.geom.quadtree(data),
+                      i = 0,
+                      n = data.length;
+
+                  while (++i < n) {
+
+                    //console.log(q);
+                    // console.log("data radius: "+ data[i].r);
+                    q.visit(collide(data[i]));
+                  }
+
+                 svg.selectAll("circle")
+                        .attr("cx", function(d){ return d.x; })
+                        .attr("cy", function(d){ return d.y; })
+
+                  svg.selectAll("text")
+                         .attr("x", function(d){ return d.x; })
+                          .attr("y", function(d){ return d.y + 5; })
+                });
+
+                 svg.on("mousemove", function() {
+                  var p1 = d3.mouse(this);
+                  root.px = p1[0];
+                  root.py = p1[1];
+                  force.resume();
+                  // console.log (p1[0]+","+p1[1])
+                });
+                 //setup the chart
+                    // var bubbles = svg.append("g")
+                    //     .attr("transform", "translate(0,0)")
+                    //     .selectAll(".bubble")
+                    //     .data(nodes)
+                    //     .enter();
+                    //create the bubbles
+                    // console.log(bubbles);
+
+
+                  
+             })
+
+
+            // var svg = d3.select("body").append("svg")
+            //     .attr("width", width)
+            //     .attr("height", height);
+
+            // svg.selectAll("circle")
+            //     .data(nodes.slice(1))
+            //   .enter().append("circle")
+            //     .attr("r", function(d) { return d.radius; })
+            //     .style("fill", function(d, i) { return color(i % 3); });
+
+          function collide(node) {
+            var r = node.r + 16,
+                nx1 = node.x - r,
+                nx2 = node.x + r,
+                ny1 = node.y - r,
+                ny2 = node.y + r;
+            return function(quad, x1, y1, x2, y2) {
+
+              if (quad.point && (quad.point !== node)) {
+
+                var x = node.x - quad.point.x,
+                    y = node.y - quad.point.y,
+                    l = Math.sqrt(x * x + y * y),
+                    r = node.radius + quad.point.radius;
+                if (l < r) {
+                  l = (l - r) / l * .5;
+                  node.x -= x *= l;
+                  node.y -= y *= l;
+                  quad.point.x += x;
+                  quad.point.y += y;
+                }
+              }
+              // if(x1>nx2){
+              //   console.log("pizza");
+              // }
+              // if(x2<nx1){
+              //   console.log("cheese");
+              // }
+              // if(y1>ny2){
+              //   console.log("mushrrom");
+              // }
+              // if(y2<ny1){
+              //   console.log("ice cream");
+              // }
+              return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+            };
+          }
+
+        </script>
+
+    </body>
+</html>

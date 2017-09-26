@@ -1,0 +1,134 @@
+<!-- <html>
+    <head>
+        <title>Page Title</title>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <script>
+            d3.select("body").append("p").text("New paragraph!");
+        </script>
+    <h1>Page Title</h1>
+        <p>This is a really interesting paragraph.</p> 
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="utf-8">
+    <title>D3 Bargraph Test</title>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+
+        .bar {
+          fill: steelblue;
+        }
+
+        .bar:hover {
+          fill: orange;
+        }
+
+        .axis {
+          font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+        .x.axis path {
+          display: none;
+        }
+
+        </style>
+</head>
+​
+<body>
+<!-- ​https://bl.ocks.org/mbostock/3885304 -->
+
+<!-- http://bl.ocks.org/kiranml1/6872226 -->
+    <script type="text/javascript">
+
+        "use strict";
+
+        var margin = {top:10,right:10,bottom:200,left:40};
+        var width = 960 - margin.left-margin.right;
+        var height = 500 - margin.top - margin.bottom;
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0,width],0.1);
+
+        var y = d3.scale.linear()
+            .range([height,0]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(20, "myr");
+
+        var svg = d3.select("body").append("svg")
+            .attr("width",width+margin.left+margin.right)
+            .attr("height", height +margin.top+margin.bottom)
+            .append("g")
+            .attr("transform", "translate("+margin.left+","+margin.top + ")");
+
+        d3.csv("epochs2.csv", type, function(error, data) {
+            if(error) throw error;
+
+            x.domain(data.map(function(d){return d.Time_Period;}));
+            y.domain([0,d3.max(data,function(d){ return d.Length})]);
+
+            svg.append("g")
+                .attr("class","x axis")
+                .attr("transform","translate(0,"+height + ")")
+                // .attr("rotate", -90)
+                // .attr("transform", "translate(150,0) rotate(90)")
+                .call(xAxis)
+                    .selectAll("text")
+                    // .attr("rotate", -90)
+                    .attr("transform", "translate(0,10) rotate(-90)")
+                    .attr("letter-spacing", "0.1em")
+                    .style("text-anchor","end");
+                    
+                // http://stackoverflow.com/questions/15437256/vertical-text-in-d3-not-rotated
+            svg.append("g")
+                .attr("class","y axis")
+                .call(yAxis)
+                .append("text")
+                .attr("transform","rotate(-90)")
+                .attr("y",6)
+                .attr("dy",".71em")
+                .style("text-anchor","end")
+                .text("Years(Million)");
+
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class","bar")
+                .attr("x",function(d){return x(d.Time_Period);})
+                .attr("width", x.rangeBand())
+                .attr("y",function(d){
+                    console.log(d.Length);
+                    return y(d.Length);})
+                .attr("height", function(d){return height - y(d.Length);});
+
+        });
+
+        function type(d){
+            d.Length = +d.Length;
+            return d;
+
+        }
+        
+    </script>
+</body>
+​
+</html>

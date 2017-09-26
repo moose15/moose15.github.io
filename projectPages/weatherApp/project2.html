@@ -1,0 +1,53 @@
+<!--  Author: Katie Pustolski
+Last Edited: 11/25/13
+ Project 2: Weather app
+Rich Media Web App Dev.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather App</title>
+	<!--JQUERY-->
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+	 <!-- GOOGLE FONTS -->
+	 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300' rel='stylesheet' type='text/css'>
+	<!--  GOOGLE MAPS API -->
+	 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBVAYaTH2mITubWk9RzK8WFclW_adO-e44&sensor=false&libraries=weather"></script>
+	<!--  CSS -->
+	 <link rel="stylesheet" type="text/css" href="p2style.css">
+	 <!-- ICON -->
+	 <link rel="icon" type="image/png" href="images/cloudy.png">
+</head>
+<body>
+	<!-- CONTENT -->
+	<!-- SEARCH BOX AND CLICKABLE ICONS -->
+	<section id="search">
+		<h1>Enter a City</h1>
+		<input id="searchterm" type="text" size="20" maxlength="20" value="Rochester,NY" />
+		<button type="button" id="getbutton"> Go</button>
+		<img id="ajax-loader" src="images/ajax-loader.gif" alt="loader" />
+		<section class="icons">
+			<img id="sunny" src="images/sunny.png" alt="sunny" height="50" width="55"/>
+			<img id="cloudy" src="images/cloudy.png" alt="cloudy" height="50" width="55"/>
+			<img id="storming" src="images/stormIcon.png" alt="storming" height="50" width="55"/>
+			<img id="snowing" src="images/snowing.png" alt="snowing" height="50" width="55"/>
+			<img id="raining" src="images/raining.png" alt="raining" height="50" width="55"/>
+		</section>
+	</section>
+	<!-- GOOGLE MAP -->
+	<section id= "googleMap">
+		<img src="images/mapIcon.png" alt="mapIcon" height="50" width="55"/>
+	</section>
+	<div id ="map">
+		<h2>No Map Yet</h2>
+	</div>
+	<!-- CANVAS AND WEATHER CONDITIONS CONTENT -->
+	<canvas id = "canvas" ></canvas>
+	<section id = "content"></section>
+	<!-- SCRIPTS -->
+	<script src = "scripts/ajax.js"></script> 
+	<script src = "scripts/animation.js"></script>
+
+</body>
