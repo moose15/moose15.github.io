@@ -1,7 +1,8 @@
 *{margin:0;padding:0;}
 
 body{
-  background-image:url('../images/purty_wood.png');
+  background-image:url('../images/cloudy-day.png');
+  /*background-color: #464646;*/
 }
 a:hover{
 
@@ -35,6 +36,7 @@ float:left;
 .container{
   padding-left:25px;
   background: rgba(255,255,255,0.9);
+  /*background-color: #f6f6f6;*/
   border-radius: 10px;
 }
 .colorContainer{
@@ -61,10 +63,10 @@ http://codepen.io/Sirop/pen/AvHqK
     position: fixed;
     left: 0px;
     top: 0px;
-    height: 100%;
+    height: 31%;
     z-index: 9999;
     width: 100%;
-    background-color: rgba(20, 20, 20, 0.8);
+    /*background-color: rgba(20, 20, 20, 0.8);*/
 }
 .loader {
     /*position: fixed;*/
@@ -74,16 +76,17 @@ http://codepen.io/Sirop/pen/AvHqK
     /*height: 100%;*/
     /*z-index: 9999;*/
     /*background: url('../images/ajax-loader.gif') 50% 50% no-repeat rgb(249,249,249);*/
-  width:100px;
-  height:100px;
+  width:75px;
+  height:75px;
   margin:auto;
   position:absolute;
   top:0;right:0;bottom:0;left:0;
   border-radius:50%;
-  border-bottom:15px solid transparent;
-  border-top:   15px solid transparent;
-  border-right: 15px solid #fff;
-  border-left:  15px solid #fff;
+  /*background-color: #00ACFF;*/
+  border-bottom:10px solid transparent;
+  border-top:   10px solid transparent;
+  border-right: 10px solid #00ACFF;
+  border-left:  10px solid #00ACFF;
   -webkit-animation: rotate360 1s infinite linear;
   -moz-animation: rotate360 1s infinite linear;
   -o-animation: rotate360 1s infinite linear;
@@ -167,9 +170,11 @@ margin-top:10px;
 width: 240px;
 color:black;
 letter-spacing: 1px;
-font-family: 'Pacifico', cursive;
+/*font-family: 'Pacifico', cursive;*/
+font-family: 'Quicksand', sans-serif;
 
 }
+
 
 /********
 PROJECTs
