@@ -74,3 +74,4 @@ $(".st0").mouseenter(function(){
 }).mouseleave(function(){
   $(".hidden").fadeOut(50);
 });
+

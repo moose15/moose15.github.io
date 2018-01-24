@@ -59,3 +59,19 @@ $(".st0").mouseenter(function(){
 }).mouseleave(function(){
   $(".hidden").fadeOut(50);
 });
+
+// For Stepstone Island Page. Birds fly as you scroll
+//http://jsfiddle.net/MMZ2h/4/
+var lastScrollTop = 0;
+$(window).scroll(function (event) {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+      // console.log("scrolling");
+        $('img.bird').animate({left: '-=5'}, 10);
+    } else {
+            console.log("scrolling");
+
+        $('img.bird').animate({left: '+=5'}, 10);
+    }
+    lastScrollTop = st;
+});
