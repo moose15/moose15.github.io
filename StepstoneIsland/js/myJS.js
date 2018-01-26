@@ -63,15 +63,35 @@ $(".st0").mouseenter(function(){
 // For Stepstone Island Page. Birds fly as you scroll
 //http://jsfiddle.net/MMZ2h/4/
 var lastScrollTop = 0;
+var startXBird=$(window).width()-60;
+var startXCloud=$(window).width()-150;
+var st;
+// var startY1=$("img.bird").offset().top;
+// var startY2=$("img.bird").offset().top;
 $(window).scroll(function (event) {
-    var st = $(this).scrollTop();
-    if (st > lastScrollTop) {
-      // console.log("scrolling");
-        $('img.bird').animate({left: '-=5'}, 10);
-    } else {
-            console.log("scrolling");
+    st = $(this).scrollTop();
+    MoveBird($('img.bird1'),st,10,'-=4',false);
+    MoveBird($('img.bird2'),st,10,'-=5',false);
+    MoveBird($('img.bird3'),st,10,'-=2',false);
+    MoveBird($('img.cloud1'),st,10,'-=1',true);
+    MoveBird($('img.cloud2'),st,10,'-=3',true);
 
-        $('img.bird').animate({left: '+=5'}, 10);
-    }
-    lastScrollTop = st;
 });
+
+function MoveBird(birdImg, sp, speed, moveAmount,isCloud){
+  if(birdImg.position().left<= -20){
+      if(isCloud){
+        birdImg.css({left:startXCloud});
+      }
+      else{
+        birdImg.css({left:startXBird});
+      }
+    }
+    if (sp > lastScrollTop) {
+        birdImg.animate({left: moveAmount},speed);
+    } else {
+       birdImg.animate({left: moveAmount}, speed);
+    }
+    lastScrollTop = sp;
+
+}
