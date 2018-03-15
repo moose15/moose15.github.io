@@ -63,8 +63,8 @@ $(".st0").mouseenter(function(){
 // For Stepstone Island Page. Birds fly as you scroll
 //http://jsfiddle.net/MMZ2h/4/
 var lastScrollTop = 0;
-var startXBird=$(window).width()-60;
-var startXCloud=$(window).width()-150;
+var startXBird=$(window).width();
+var startXCloud=$(window).width();
 var st;
 // var startY1=$("img.bird").offset().top;
 // var startY2=$("img.bird").offset().top;
@@ -79,7 +79,7 @@ $(window).scroll(function (event) {
 });
 
 function MoveBird(birdImg, sp, speed, moveAmount,isCloud){
-  if(birdImg.position().left<= -20){
+  if(birdImg.position().left<= -150){
       if(isCloud){
         birdImg.css({left:startXCloud});
       }

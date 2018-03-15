@@ -3,12 +3,13 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
+body{
+    overflow-x: hidden;
+}
 
 body, html {
   width: 100%;
   height: 100%;
-  /*overflow-x: hidden;*/
-
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -20,10 +21,13 @@ body, h1, h2, h3, h4, h5, h6 {
 
   width:100%;
 }
- #about img{
+
+ #about img {
   width:500px;
  }
-
+#support img{
+  /*width:500px;*/
+}
  #screenshots img{
   width: 90%;
   padding:10px 0;
@@ -76,7 +80,8 @@ height:50px;
 .intro-header {
   padding-top: 50px;
   text-align: left;
-  color: #f8f8f8;
+  /*color: #f8f8f8;*/
+  color:#ffffd0;
   background-color: #68bcd2;
 }
 
@@ -110,6 +115,11 @@ height:50px;
 .intro-social-buttons i {
   font-size: 80%;
 }
+
+/*#about iframe,#about img, #about img{
+  width:100%;
+  padding-top: 72px;
+}*/
 
 @media(max-width:767px) {
   .intro-message {
@@ -256,7 +266,6 @@ FLying Birds and clouds
 
 .flyingBird img{
     position: absolute;
-
     /*top:400px;*/
     /*right:150px;*/
     /*width:10%;*/
