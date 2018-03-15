@@ -116,10 +116,10 @@ height:50px;
   font-size: 80%;
 }
 
-/*#about iframe,#about img, #about img{
+#about iframe {
   width:100%;
-  padding-top: 72px;
-}*/
+  /*padding-top: 72px;*/
+}
 
 @media(max-width:767px) {
   .intro-message {
