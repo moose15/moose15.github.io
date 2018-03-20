@@ -391,11 +391,14 @@ figure.effect-bubba:hover p {
 #projectDescription h1{
   font-weight: bold;
 }
-#projectDescription iframe,#projectDescription img, #projectPhotos img{
+#projectDescription iframe,#projectDescription img{
   width:100%;
   padding-top: 72px;
 }
-
+ #projectPhotos img{
+    width:100%;
+    padding-top: 25px;
+ }
 .bold{
   font-weight: bold;
 }
