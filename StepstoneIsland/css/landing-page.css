@@ -17,7 +17,7 @@ body, h1, h2, h3, h4, h5, h6 {
   /*font-weight: 700;*/
 }
 
-#top img{
+.headerImg img{
 
   width:100%;
 }
@@ -86,14 +86,16 @@ height:50px;
 }
 
 .intro-message {
-  position: relative;
-  padding-top: 18%;
-  padding-bottom: 18%;
+  position: absolute;
+  top:30%;
+  /*text-align: center;*/
+  font-size: 14pt;
+  /*padding-top: 18%;*/
+  /*padding-bottom: 18%;*/
 
 }
-.intro-message p{
-  font-size: 
-
+.intro-message img{
+  width: 50%;
 }
 
 .messageBackground>h1 {
@@ -140,6 +142,9 @@ height:50px;
   .intro-divider {
     width: 100%;
   }
+/*  .phoneHide{
+    display: none;
+  }*/
 }
 
 .network-name {
