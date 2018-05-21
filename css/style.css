@@ -175,7 +175,9 @@ font-family: 'Quicksand', sans-serif;
 
 }
 
-
+.offWhiteBG{
+  background-color: #f6f6f6;
+}
 /********
 PROJECTs
 *********/
@@ -370,7 +372,13 @@ figure.effect-bubba:hover p {
   .grid figure p {
     font-size: 0.2em;
   }
-
+  #projectDescription .appleBadge{
+    text-align: center;
+    margin:15px 0px 0px 0px;
+  }
+  .badges{
+    text-align: center;
+}
 }
 
 /*******
@@ -401,6 +409,22 @@ figure.effect-bubba:hover p {
  }
 .bold{
   font-weight: bold;
+}
+ #projectDescription .appleBadge img{
+  width:175px;
+  margin:50px 0px 10px 0px;
+  padding:0;
+}
+ #projectDescription .appleBadge{
+  text-align: center;
+ }
+.badges img{
+  width: 157px;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+.badges{
+  text-align: center;
 }
 /*******
 FOOTER
