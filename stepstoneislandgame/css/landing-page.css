@@ -118,8 +118,11 @@ height:50px;
 }
 
 #badges img{
-  width: 100%;
-  margin: 0 auto;
+      width:187px;
+}
+.badgeContainer {
+    width: 100%;
+    text-align: center;
 }
 
 .messageBackground>h1 {
