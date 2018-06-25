@@ -221,13 +221,14 @@ PROJECTs
 
 #projects span{
   /*font-weight: 800;*/
-   font-weight: 900;
+   /*font-weight: 900;*/
 }
 #projects p, #projects a{
     font-family: 'Quicksand', sans-serif;
 }
 #projects h5{
-  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  /*font-weight: bold;*/
 }
 #projects p {
     font-size: 14pt;
@@ -476,7 +477,8 @@ figure.effect-bubba:hover p {
   padding-bottom: 20px;
 }
 #projectInfo h5{
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-family: 'Quicksand', sans-serif;
 }
 #projectDescription{
   padding:0;
