@@ -189,24 +189,9 @@ font-family: 'Quicksand', sans-serif;
   background-color: #84b2dd;
 }
 /********
-ABOUT
-*********/
-#projectDescription .aboutPic img{
-  width:90%;
-  margin:25px 0px 0px 0px;
-  padding:0;
-  border-radius: 10px;
-}
-#projectDescription .aboutPic{
-    text-align: center;
-}
-#about .container{
-  padding-bottom: 20px;
-}
-/********
 PROJECTs
 *********/
-#projects .container , #about .container{
+#projects .container{
   position: relative;
   margin-top: 20px;
     /*background-color: rgba(255,255,255,0.8);*/
@@ -223,11 +208,8 @@ PROJECTs
   /*font-weight: 800;*/
    font-weight: 900;
 }
-#projects p, #projects a{
+#projects p, #projects h5, #projects a{
     font-family: 'Quicksand', sans-serif;
-}
-#projects h5{
-  font-weight: bold;
 }
 #projects p {
     font-size: 14pt;
