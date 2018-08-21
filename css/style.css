@@ -13,12 +13,13 @@ a{
   position: relative;
   z-index: 999;
 }
-hr{
-  background-color: orange;
-  left:0;
-  /*width: 75%;*/
-}
 
+p, h1, h6{
+  color:#8c8c8c;
+}
+span, h2{
+  color: #5e5e5e;
+}
 .floatRight{
 float:right;
 
@@ -26,6 +27,9 @@ float:right;
 .floatLeft{
 float:left;
 
+}
+.center{
+  text-align: center;
 }
 /*#content{
    z-index: 1000;
@@ -40,6 +44,7 @@ float:left;
 .container{
   padding-left:25px;
   background: rgba(255,255,255,0.9);
+
   /*background-color: #f6f6f6;*/
   border-radius: 5px;
 }
@@ -133,36 +138,35 @@ NAV
 #navigation{
   min-width: 700px;
   margin-top: 20px;
-  
 }
+
 #navigation ul {
     list-style-type: none;
     /*width: 99%;*/
     height:53px;
     overflow: hidden;
-
 }
-
 
 #navigation li a {
     display: block;
-    color: black;
+    /*color: black;*/
+    color:#5e5e5e;
     padding: 14px 16px;
     margin:2px;
     font-size: 12pt;
-    font-family: 'Quicksand', sans-serif;
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Lato', sans-serif;
     text-decoration: none;
 }
-
-.buttons:hover {
-    text-decoration: none;
-    color:black;
-    border-bottom: 1px solid #00ACFF;
-
+#navigation li a:hover {
+    color:#00ACFF;
+    /*border-bottom: 1px solid #00ACFF;*/
 }
 
-.active {
-    border-bottom: 1px solid #00ACFF;
+#navigation li a .activePage {
+    color:#00ACFF;
+    font-weight: bold;
+    /*border-bottom: 1px solid #00ACFF;*/
 }
 
 .title{
@@ -173,10 +177,13 @@ z-index: 1000;
 position: absolute;
 margin-top:10px;
 width: 600px;
-color:black;
+/*color:black;*/
+color:#5e5e5e;
 letter-spacing: 1px;
 /*font-family: 'Pacifico', cursive;*/
-font-family: 'Quicksand', sans-serif;
+/*font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Lato', sans-serif;
+
 
 }
 
@@ -197,6 +204,10 @@ ABOUT
   padding:0;
   border-radius: 10px;
 }
+#projectDescription h2{
+  font-family: 'Lato', sans-serif;
+  color: #5e5e5e;
+}
 #projectDescription .aboutPic{
     text-align: center;
 }
@@ -206,6 +217,17 @@ ABOUT
 /********
 PROJECTs
 *********/
+
+#projects .title h2, .title h3{
+    /*font-family: 'Quicksand', sans-serif;*/
+      font-family: 'Lato', sans-serif;
+
+    text-align: center;
+}
+#projects .title h2 a:hover {
+    color:#00ACFF;
+    /*border-bottom: 1px solid #00ACFF;*/
+}
 #projects .container , #about .container{
   position: relative;
   margin-top: 20px;
@@ -224,10 +246,15 @@ PROJECTs
    /*font-weight: 900;*/
 }
 #projects p, #projects a{
-    font-family: 'Quicksand', sans-serif;
+    /*font-family: 'Quicksand', sans-serif;*/
+      font-family: 'Lato', sans-serif;
+
 }
 #projects h5{
-  font-family: 'Quicksand', sans-serif;
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  line-height: 20px;
   /*font-weight: bold;*/
 }
 #projects p {
@@ -450,10 +477,10 @@ figure.effect-bubba:hover p {
   .grid figure p {
     /*font-size: 0.2em;*/
   }
-  #projectDescription .appleBadge{
+/*  #projectDescription .appleBadge{
     text-align: center;
-    margin:15px 0px 0px 0px;
-  }
+    margin:10px 0px 0px 0px;
+  }*/
   .badges{
     text-align: center;
   }
@@ -467,35 +494,46 @@ figure.effect-bubba:hover p {
    
     text-align: center;
   }
+  #projectDescription p{
+    /*font-size: 14pt;*/
+    padding:none;
+  }
 }
 
 /*******
  PROJECT PAGES
 ********/
+#projectInfo hr{
+  background-color: #8c8c8c;
+}
 #projectInfo .container{
   margin-top: 20px;
   padding-bottom: 20px;
 }
 #projectInfo h5{
-  /*font-weight: bold;*/
-  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Lato', sans-serif;
+  color:#5e5e5e;
+  font-size: 12pt;
+  line-height: 20px;
 }
-#projectDescription{
-  padding:0;
+#projectInfo h1{
+  color:#5e5e5e;
+}
+#projectDescription {
+  font-size: 14pt;
+  padding:20px 0 20px 0;
 }
 #projectDescription p , h1, .moreProjects,footer{
-  
-  font-family: 'Quicksand', sans-serif;
+  /*font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Lato', sans-serif;
+}
 
-}
-#projectDescription p{
-  font-size: 14pt;
-  margin-top: 15px;
-}
 #projectDescription h1{
   font-weight: bold;
 }
-#projectDescription iframe,#projectDescription img{
+.projectInfo iframe, .projectInfo img{
   width:100%;
   padding-top: 72px;
 }
@@ -508,7 +546,7 @@ figure.effect-bubba:hover p {
 }
  #projectDescription .appleBadge img{
   width:175px;
-  margin:50px 0px 10px 0px;
+  margin:10px 0px 0px 0px;
   padding:0;
 }
  #projectDescription .appleBadge{
@@ -521,6 +559,12 @@ figure.effect-bubba:hover p {
 }
 .badges{
   text-align: center;
+}
+.videoPadding{
+  padding: 20px 0px;
+}
+.topPicture img{
+  width:70%;
 }
 /*******
 FOOTER
