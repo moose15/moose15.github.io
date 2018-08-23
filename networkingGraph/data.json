@@ -59,7 +59,8 @@
   	{"source": "RIT", "target": "Scarlett Hoefler", "value": 2},
   	{"source": "RIT", "target": "Leigh Rage", "value": 2},
   	{"source": "RIT", "target": "Arun Abraham", "value": 2},
-    {"source": "RIT", "target": "Jon Runkel", "value": 2}
+    {"source": "RIT", "target": "Jon Runkel", "value": 2},
+    {"source": "USC", "target": "Daniel Scott", "value": 2}
 
   ]
 }

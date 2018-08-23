@@ -214,6 +214,9 @@ ABOUT
 #about .container{
   padding-bottom: 20px;
 }
+#about{
+    font-family: 'Lato', sans-serif;
+}
 /********
 PROJECTs
 *********/
@@ -524,9 +527,9 @@ figure.effect-bubba:hover p {
 #projectDescription {
   font-size: 14pt;
   padding:20px 0 20px 0;
+  font-family: 'Lato', sans-serif;
 }
 #projectDescription p , h1, .moreProjects,footer{
-  /*font-family: 'Quicksand', sans-serif;*/
     font-family: 'Lato', sans-serif;
 }
 
