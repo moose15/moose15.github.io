@@ -31,7 +31,7 @@
   	{"id": "Dennis Wixon", "group": 4, "role": "USC Professor", "company": "USC", "contacted": "meeting", "infoChat": false},
   	{"id": "Tom Deveraux", "group": 4, "role": "USC Student", "company": "USC & Infinity Ward", "contacted": "skype call", "infoChat": true},
     {"id": "Joyce Dabney", "group": 15, "role": "Production Supervisor", "company": "DreamWorks Animation", "contacted": "email", "infoChat": false},
-    {"id": "Jon Runkel", "group": 15, "role": "Data Analyst", "company": "DreamWorks Animation", "contacted": "chat", "infoChat": false}
+    {"id": "Jon Runkel", "group": 15, "role": "Data Analyst", "company": "DreamWorks Animation", "contacted": "chat", "infoChat": false},
     {"id": "Amy Hennig", "group": 1, "role": "Game Director", "company": "Past: Naughty Dog / Crystal Dynamics", "contacted": "USC Seminar Class", "infoChat": false}
 
   ],
