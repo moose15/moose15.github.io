@@ -72,7 +72,7 @@ d3.json("data.json", function(error, graph) {
             toolTip.transition()    
                 .duration(200)    
                 .style("opacity", 1);    
-            toolTip.html("<p><div class='title'>"+ d.id + "</div> Company: " + d.company+"<br> Role: "+d.role+"<br> Contact Via:  "+ d.contacted+"</p>")  
+            toolTip.html("<p><div class='title'>"+ d.id + "</div> Company: " + d.company+"<br> Role: "+d.role)  
                 .style("left", (d3.event.pageX - 90) + "px")   
                 .style("top", (d3.event.pageY - 150) + "px");  
             })          

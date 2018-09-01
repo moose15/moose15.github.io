@@ -32,6 +32,7 @@
   	{"id": "Tom Deveraux", "group": 4, "role": "USC Student", "company": "USC & Infinity Ward", "contacted": "skype call", "infoChat": true},
     {"id": "Joyce Dabney", "group": 15, "role": "Production Supervisor", "company": "DreamWorks Animation", "contacted": "email", "infoChat": false},
     {"id": "Jon Runkel", "group": 15, "role": "Data Analyst", "company": "DreamWorks Animation", "contacted": "chat", "infoChat": false}
+    {"id": "Amy Hennig", "group": 1, "role": "Game Director", "company": "Past: Naughty Dog / Crystal Dynamics", "contacted": "USC Seminar Class", "infoChat": false}
 
   ],
   "links": [
@@ -43,6 +44,7 @@
     {"source": "Janine Tedford", "target": "Hector Tang", "value": 2},
     {"source": "Richard Lemarchand", "target": "Carla Fisher", "value": 2},
     {"source": "Richard Lemarchand", "target": "Juan Vaca", "value": 2},
+    {"source": "Richard Lemarchand", "target": "Amy Hennig", "value": 2},
     {"source": "Jim Huntley", "target": "Randi Cohan", "value": 2},
     {"source": "Jeffrey Kaplan", "target": "Janine Tedford", "value": 2},
     {"source": "Dennis Wixon", "target": "Genevieve Conley Gambill", "value": 2},
