@@ -32,7 +32,11 @@
   	{"id": "Tom Deveraux", "group": 4, "role": "USC Student", "company": "USC & Infinity Ward", "contacted": "skype call", "infoChat": true},
     {"id": "Joyce Dabney", "group": 15, "role": "Production Supervisor", "company": "DreamWorks Animation", "contacted": "email", "infoChat": false},
     {"id": "Jon Runkel", "group": 15, "role": "Data Analyst", "company": "DreamWorks Animation", "contacted": "chat", "infoChat": false},
-    {"id": "Amy Hennig", "group": 1, "role": "Game Director", "company": "Past: Naughty Dog / Crystal Dynamics", "contacted": "USC Seminar Class", "infoChat": false}
+    {"id": "Amy Hennig", "group": 1, "role": "Game Director", "company": "Past: Naughty Dog / Crystal Dynamics", "contacted": "USC Seminar Class", "infoChat": false},
+    {"id": "Maria Ferreri", "group": 4, "role": "USC Student", "company": "USC & Beaudry Interactive", "contacted": " ", "infoChat": false},
+    {"id": "Elise Fachon", "group": 16, "role": "Unknown", "company": "Unknown", "contacted": "Brian's Party", "infoChat": false},
+    {"id": "Ryan Bacon", "group": 16, "role": "Unknown", "company": "Unknown", "contacted": "Via mom", "infoChat": false},
+    {"id": "Ryan Cox", "group": 14, "role": "Software Developer Manager", "company": "Amazon", "contacted": "LinkedIn", "infoChat": false}
 
   ],
   "links": [
@@ -62,7 +66,10 @@
   	{"source": "RIT", "target": "Leigh Rage", "value": 2},
   	{"source": "RIT", "target": "Arun Abraham", "value": 2},
     {"source": "RIT", "target": "Jon Runkel", "value": 2},
-    {"source": "USC", "target": "Daniel Scott", "value": 2}
+    {"source": "USC", "target": "Daniel Scott", "value": 2},
+    {"source": "USC", "target": "Maria Ferreri", "value": 2},
+    {"source": "Brian Handy", "target": "Elise Fachon", "value": 2},
+    {"source": "Ryan Bacon", "target": "Ryan Cox", "value": 2}
 
   ]
 }
