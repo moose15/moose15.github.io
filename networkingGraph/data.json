@@ -1,44 +1,81 @@
 {
   "nodes": [
-    {"id": "USC", "group":0, "role": "School", "company": "USC", "contacted": " ", "infoChat": false},
-    {"id": "RIT", "group":0, "role": "School", "company": "RIT", "contacted": " ", "infoChat": false},
-    {"id": "Felix Park", "group": 1, "role": "Game Designer", "company": "Naughty Dog", "contacted": "coffee", "infoChat": true},
-    {"id": "Paula Burke", "group": 2, "role": "Software Engineer", "company": "Open Table", "contacted":"email", "infoChat": true},
-    {"id": "Mike Heiberg", "group": 3, "role": "Game Designer", "company": "Blizzard", "contacted": "coffee", "infoChat": true},
-    {"id": "Jeffrey Kaplan", "group": 3, "role": "Game Director & Vice President", "company": "Blizzard", "contacted": "phone call", "infoChat": true},
-    {"id": "Gordon Bellamy", "group": 4, "role": " USC Professor", "company": "USC", "contacted": "meeting", "infoChat": true},
-    {"id": "Carla Fisher", "group": 5, "role": "Director of Product Innovation", "company": "Netflix", "contacted": "phone call", "infoChat": true},
-    {"id": "Randi Cohan", "group": 6, "role": "Producer", "company": "Age of Learning", "contacted": "phone call & coffee", "infoChat": true},
-    {"id": "Genevieve Conley Gambill", "group": 7, "role": "User Experience Researcher", "company": "Past: Riot & Now: Facebook", "contacted": "skype call", "infoChat": true},
-    {"id": "Paul Belleza", "group": 7, "role": "Producer", "company": "Riot", "contacted": "phone call", "infoChat": true},
-    {"id": "Gavin Howell", "group": 9, "role": "?", "company": "Sony", "contacted": "email", "infoChat": false},
-    {"id": "Isaac Chan", "group": 7, "role": "Recruiter", "company": "Riot", "contacted": "phone call", "infoChat": true},
-    {"id": "Katie Chironis", "group": 7, "role": "Narrative Designer", "company": "Riot", "contacted": "Twitter DM","infoChat": true},
-    {"id": "Juan Vaca", "group": 10, "role": "Game Narrative Designer", "company": "past: Telltale", "contacted": "email", "infoChat": true},
-    {"id": "Suzanne Whelpley", "group": 11, "role": " Sr. Hiring Manager", "company": "Infinity Ward", "contacted": "phone call", "infoChat": true},
-    {"id": "Jim Huntley", "group": 4, "role": "Professor", "company": "USC", "contacted": "meeting", "infoChat": false},
-    {"id": "Audrey Cheng", "group": 4, "role": "USC Student & Blizzard Intern", "company": "USC & Blizzard", "contacted": "LinkedIn Messaging", "infoChat": false},
-    {"id": "Michelle Rosell", "group": 3, "role": "University Relations Recruiter", "company": "Blizzard", "contacted": "LinkedIn Messaging", "infoChat": false},
-    {"id": "Richard Lemarchand", "group": 4, "role": "Past: Naughty Dog & Now: USC Professor", "company": "USC", "contacted": "meeting", "infoChat": true},
-    {"id": "Janine Tedford", "group": 3, "role": "University Relations Manager", "company": "Blizzard", "contacted": "email", "infoChat": false},
-    {"id": "Arun Abraham", "group": 6, "role": "Software Engineer", "company": "Age of Learning", "contacted": "phone call", "infoChat": true},
-    {"id": "Scarlett Hoefler", "group": 12, "role": "Software Engineer", "company": "Popcap Games", "contacted": "Facebook Messanger", "infoChat": true},
-    {"id": "Carl Domingo", "group": 13, "role": "Student Programs Manager", "company": "Unity", "contacted": "Facebook Messanger", "infoChat": false},
-    {"id": "Leigh Rage", "group": 14, "role": "Software Engineer", "company": "Amazon", "contacted": "Facebook Messanger", "infoChat": false},
-    {"id": "Hector Tang", "group": 3, "role": "University Relations Recruiter", "company": "Blizzard", "contacted": "email", "infoChat": true},
-  	{"id": "Brian Handy", "group": 4, "role": "Game Designer & USC Classmate", "company": "USC", "contacted": "meeting", "infoChat": false},
-  	{"id": "Daniel Scott", "group": 4, "role": "USC Student", "company": "USC", "contacted": "chat", "infoChat": false},
-  	{"id": "Dennis Wixon", "group": 4, "role": "USC Professor", "company": "USC", "contacted": "meeting", "infoChat": false},
-  	{"id": "Tom Deveraux", "group": 4, "role": "USC Student", "company": "USC & Infinity Ward", "contacted": "skype call", "infoChat": true},
-    {"id": "Joyce Dabney", "group": 15, "role": "Production Supervisor", "company": "DreamWorks Animation", "contacted": "email", "infoChat": false},
-    {"id": "Jon Runkel", "group": 15, "role": "Data Analyst", "company": "DreamWorks Animation", "contacted": "chat", "infoChat": false},
-    {"id": "Amy Hennig", "group": 1, "role": "Game Director", "company": "Past: Naughty Dog / Crystal Dynamics", "contacted": "USC Seminar Class", "infoChat": false},
-    {"id": "Maria Ferreri", "group": 4, "role": "USC Student", "company": "USC & Beaudry Interactive", "contacted": " ", "infoChat": false},
-    {"id": "Elise Fachon", "group": 16, "role": "Unknown", "company": "Unknown", "contacted": "Brian's Party", "infoChat": false},
-    {"id": "Ryan Bacon", "group": 16, "role": "Unknown", "company": "Unknown", "contacted": "Via mom", "infoChat": false},
-    {"id": "Ryan Cox", "group": 14, "role": "Software Developer Manager", "company": "Amazon", "contacted": "LinkedIn", "infoChat": false},
-    {"id": "Jane Pinckard", "group": 4, "role": "Professor", "company": "USC", "contacted": " ", "infoChat": false},
-    {"id": "Cathrine Silvestre", "group": 17, "role": "Lead Game Designer (?)", "company": "N3twork", "contacted": " ", "infoChat": false}
+
+    {"id": "USC", "group":0, "role": "School", "company": "USC"},
+    {"id": "RIT", "group":0, "role": "School", "company": "RIT"},
+
+    {"id": "Felix Park", "group": 1, "role": "Game Designer", "company": "Naughty Dog"},
+    {"id": "Amy Hennig", "group": 1, "role": "Game Director", "company": "Past: Naughty Dog / Crystal Dynamics"},
+
+    {"id": "Paula Burke", "group": 2, "role": "Software Engineer", "company": "Open Table"},
+
+    {"id": "Mike Heiberg", "group": 3, "role": "Game Designer", "company": "Blizzard"},
+    {"id": "Jeffrey Kaplan", "group": 3, "role": "Game Director & Vice President", "company": "Blizzard"},
+    {"id": "Michelle Rosell", "group": 3, "role": "University Relations Recruiter", "company": "Blizzard"},
+    {"id": "Janine Tedford", "group": 3, "role": "University Relations Manager", "company": "Blizzard"},
+    {"id": "Hector Tang", "group": 3, "role": "University Relations Recruiter", "company": "Blizzard"},
+
+    {"id": "Gordon Bellamy", "group": 4, "role": " USC Professor", "company": "USC"},
+    {"id": "Jim Huntley", "group": 4, "role": "Professor", "company": "USC"},
+    {"id": "Audrey Cheng", "group": 4, "role": "USC Student & Blizzard Intern", "company": "USC & Blizzard"},
+    {"id": "Richard Lemarchand", "group": 4, "role": "Past: Naughty Dog & Now: USC Professor", "company": "USC"},
+    {"id": "Brian Handy", "group": 4, "role": "Game Designer & USC Classmate", "company": "USC"},
+    {"id": "Daniel Scott", "group": 4, "role": "USC Student", "company": "USC"},
+    {"id": "Dennis Wixon", "group": 4, "role": "USC Professor", "company": "USC"},
+    {"id": "Tom Deveraux", "group": 4, "role": "USC Student", "company": "USC & Infinity Ward"},
+    {"id": "Maria Ferreri", "group": 4, "role": "USC Student", "company": "USC & Beaudry Interactive"},
+    {"id": "Jane Pinckard", "group": 4, "role": "Professor", "company": "USC"},
+    {"id": "Sam Roberts", "group": 4, "role": "Assistant Director", "company": "USC"},
+
+    {"id": "Carla Fisher", "group": 5, "role": "Director of Product Innovation", "company": "Netflix"},
+
+    {"id": "Randi Cohan", "group": 6, "role": "Producer", "company": "Age of Learning"},
+    {"id": "Arun Abraham", "group": 6, "role": "Software Engineer", "company": "Age of Learning"},
+    {"id": "Marie Brown", "group": 6, "role": "Recruiter", "company": "Age of Learning"},
+    {"id": "Paul Appleton", "group": 6, "role": "Recruiter", "company": "Age of Learning"},
+    {"id": "Leonid Umanskiy", "group": 6, "role": "Software Engineer", "company": "Age of Learning"},
+    {"id": "Devon Klompmaker", "group": 6, "role": "Software Engineer", "company": "Age of Learning"},
+
+    {"id": "Genevieve Conley Gambill", "group": 7, "role": "User Experience Researcher", "company": "Past: Riot & Now: Facebook"},
+    {"id": "Paul Belleza", "group": 7, "role": "Producer", "company": "Riot"},
+    {"id": "Isaac Chan", "group": 7, "role": "Recruiter", "company": "Riot"},
+    {"id": "Katie Chironis", "group": 7, "role": "Narrative Designer", "company": "Riot"},
+
+    {"id": "Gavin Howell", "group": 9, "role": "?", "company": "Sony"},
+
+    {"id": "Juan Vaca", "group": 10, "role": "Game Narrative Designer", "company": "past: Telltale"},
+
+    {"id": "Suzanne Whelpley", "group": 11, "role": " Sr. Hiring Manager", "company": "Infinity Ward"},
+
+    {"id": "Scarlett Hoefler", "group": 12, "role": "Software Engineer", "company": "Popcap Games"},
+
+    {"id": "Carl Domingo", "group": 13, "role": "Student Programs Manager", "company": "Unity"},
+
+    {"id": "Leigh Rage", "group": 14, "role": "Software Engineer", "company": "Amazon"},
+    {"id": "Ryan Cox", "group": 14, "role": "Software Developer Manager", "company": "Amazon"},
+
+    {"id": "Joyce Dabney", "group": 15, "role": "Production Supervisor", "company": "DreamWorks Animation"},
+    {"id": "Jon Runkel", "group": 15, "role": "Data Analyst", "company": "DreamWorks Animation"},
+    {"id": "Manny Francisco", "group": 15, "role": "ACT Team lead", "company": "DreamWorks Animation"},
+    {"id": "Kelly Kiernan", "group": 15, "role": "Producer", "company": "DreamWorks Animation"},
+    {"id": "Bryant Clements", "group": 15, "role": "Hiring Manager", "company": "DreamWorks Animation"},
+    {"id": "Karen Barnash", "group": 15, "role": "Recruiter", "company": "DreamWorks Animation"},
+
+    {"id": "Elise Fachon", "group": 16, "role": "Unknown", "company": "Unknown"},
+    {"id": "Ryan Bacon", "group": 16, "role": "Software Engineer", "company": "Unknown"},
+
+    {"id": "Cathrine Silvestre", "group": 17, "role": "Designer, Product Manager", "company": "N3twork"},
+    {"id": "Gina Reams", "group": 17, "role": "Design, Product Management", "company": "N3twork"},
+    {"id": "Jenn Mannion", "group": 17, "role": "Recruiter", "company": "N3twork"},
+    {"id": "Ethan Levy", "group": 17, "role": "Designer", "company": "N3twork"},
+    {"id": "Shu Cheah", "group": 17, "role": "Software Engineer", "company": "N3twork"},
+    {"id": "Fay Griffin", "group": 17, "role": "Ops / Project Management", "company": "N3twork"},
+    {"id": "Hidde Tonegawa", "group": 17, "role": "Product Management, Live Ops", "company": "N3twork"},
+
+    {"id": "Robyn Tong Gray", "group": 18, "role": "Lead Game Designer / CCO", "company": "Otherworld Interactive"},
+    {"id": "Andy Goldstein", "group": 18, "role": "Head of Business", "company": "Otherworld Interactive"},
+
+    {"id": "Chelsea Robbins", "group": 19, "role": "Recruiter", "company": "Jam City"}
 
   ],
   "links": [
@@ -71,9 +108,22 @@
     {"source": "USC", "target": "Daniel Scott", "value": 2},
     {"source": "USC", "target": "Maria Ferreri", "value": 2},
     {"source": "USC", "target": "Jane Pinckard", "value": 2},
+    {"source": "USC", "target": "Sam Roberts", "value": 2},
     {"source": "Brian Handy", "target": "Elise Fachon", "value": 2},
     {"source": "Ryan Bacon", "target": "Ryan Cox", "value": 2},
-    {"source": "Jane Pinckard", "target": "Cathrine Silvestre", "value": 2}
-
+    {"source": "Jane Pinckard", "target": "Cathrine Silvestre", "value": 2},
+    {"source": "Sam Roberts", "target": "Robyn Tong Gray", "value": 2},
+    {"source": "Karen Barnash", "target": "Bryant Clements", "value": 2},
+    {"source": "Karen Barnash", "target": "Kelly Kiernan", "value": 2},
+    {"source": "Karen Barnash", "target": "Manny Francisco", "value": 2},
+    {"source": "Paul Appleton", "target": "Leonid Umanskiy", "value": 2},
+    {"source": "Paul Appleton", "target": "Devon Klompmaker", "value": 2},
+    {"source": "Robyn Tong Gray", "target": "Andy Goldstein", "value": 2},
+    {"source": "Cathrine Silvestre", "target": "Gina Reams", "value": 2},
+    {"source": "Cathrine Silvestre", "target": "Jenn Mannion", "value": 2},
+    {"source": "Cathrine Silvestre", "target": "Ethan Levy", "value": 2},
+    {"source": "Cathrine Silvestre", "target": "Shu Cheah", "value": 2},
+    {"source": "Cathrine Silvestre", "target": "Fay Griffin", "value": 2},
+    {"source": "Cathrine Silvestre", "target": "Hidde Tonegawa", "value": 2}
   ]
 }

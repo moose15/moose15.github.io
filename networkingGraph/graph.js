@@ -1,7 +1,7 @@
 // https://bl.ocks.org/mbostock/4062045
 var width = 700,
     height = 500,
-    radius = 5;
+    radius = 7.5;
 
 // Define the div for the tooltip
 // var toolTip = d3.select("body").append("div") 
@@ -26,7 +26,7 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
 //     .range(["#FF0000", "#009933" , "#0000FF"]);
 
 var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(60).strength(0.1))
+    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(20).strength(1))
     // .force("x", d3.forceX())
     // .force("y", d3.forceY())
     .force("charge", d3.forceManyBody().strength(-17))
