@@ -1,242 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Katie Pustolski's Portfolio</title>
-        <!--MY CSS-->
-        <link href="css/style.css" rel="stylesheet">
-        <!-- ICON -->
-        <link rel="icon" type="image/png" href="images/icons/KPIcon_blue.png">
-        <!-- GOOGLE FONT -->
-        <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-        <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <!-- JQUERY -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    
-    </head>
-    <body>
-          <!--Loader-->
-          <div id="loadScreen">
-            <div class="loader"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" type="image/png" href="images/icons/KPIcon_blue.png">
+    <title>Katie Pustolski's Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+    <main role="main" >
+        <div class= "gradient">
+          <div class="bg-white-transparent">
+            <div class="container d-flex flex-column flex-md-row align-items-center p-3 px-md-4 navigation">
+              <h5 class="my-0 mr-md-auto font-weight-normal">Katie Pustolski</h5>
+              <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 active" href="index.html">Home</a>
+                <a class="p-2" href="about.html">About</a>
+                <a class="p-2" target="_blank"  href="http://katiepustolski.tumblr.com/">Blog</a>
+                <a class="p-2" target="_blank"  href="resume/KPustolski_resume.pdf">Résumé</a>
+              </nav>
+            </div>
           </div>
-          <!-- END LOADER -->
+        <section class="cover text-center">
+            <div class="container">
+              <p class="cover-heading-subtext font-white">Hello, I am </p>
+              <h1 class="cover-heading font-white">Katie Pustolski</h1>
+              <p class="cover-heading-subtext font-white">Game & Interaction Designer</p>
+               <!-- https://iconmonstr.com/gamepad-9-svg/ -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path style = "fill: white" d="M23.908 16.041l-2.344-9.66c-.205-.821-.943-1.381-1.789-1.381h-15.551c-.845 0-1.582.56-1.787 1.381l-2.344 9.66c-.064.251-.093.491-.093.716 0 1.38 1.095 2.243 2.287 2.243.632 0 1.292-.243 1.83-.781l2.406-2.87c.44.643 1.238 1.007 2.077 1.007 1.712 0 2.139-1.542 3.403-1.542 1.099 0 1.615 1.542 3.457 1.542.84 0 1.578-.364 2.02-1.007l2.404 2.87c.537.538 1.197.781 1.83.781 1.191 0 2.286-.863 2.286-2.242 0-.226-.028-.465-.092-.717zm-8.158-7.291c.414 0 .75.335.75.75s-.336.75-.75.75-.75-.335-.75-.75.336-.75.75-.75zm-8.75 3.25h-1v-2h-2v-1h2v-2h1v2h2v1h-2v2zm1.658 3.005c-.726 0-1.316-.59-1.316-1.316 0-.726.59-1.316 1.316-1.316.726 0 1.316.59 1.316 1.316 0 .726-.591 1.316-1.316 1.316zm4.342-4.005h-2v-1h2v1zm2.344 4.005c-.727 0-1.316-.59-1.316-1.316 0-.726.59-1.316 1.316-1.316.725 0 1.314.59 1.314 1.316 0 .726-.59 1.316-1.314 1.316zm2.156-3.005c-.414 0-.75-.335-.75-.75s.336-.75.75-.75.75.335.75.75-.336.75-.75.75zm0-3.531c-.414 0-.75-.335-.75-.75s.336-.75.75-.75.75.335.75.75-.336.75-.75.75zm1.734 1.781c-.414 0-.75-.335-.75-.75s.336-.75.75-.75.75.335.75.75-.336.75-.75.75z"/></svg>
+            </div>
+        </section>
+      <div id = "projectsList" class="album bg-greyLightBlue">
+        <div class="container">
 
-            <!-- CONTENT -->
-           <div class="content">
-              <div class="container">
-                <!-- NAV BAR -->
-                <div id="navigation">
-                  <a href="index.html"><h2 class="floatLeft title">
-                    Katie Pustolski</h2></a>
-                   <ul>
-                    <li class="buttons floatRight"><a href="resume/KPustolski_resume.pdf" target="_blank">R&eacute;sum&eacute;</a></li>
-                    <li class="buttons floatRight blogLink"><a href="">Blog</a></li>
-                    <li class="buttons floatRight"><a href="about.html">About</a></li>
-                    <li class="buttons floatRight"><a href="index.html"><div class="activePage">Home</div></a></li>
-                  </ul>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-6 shadow-sm">
+                <a href="project_pages/stepstone.html">
+                  <img class="card-img-top " src="images/thumbnails/thesis_thumb.png" alt="image">
+                </a>
+                <div class="cardPaddingTitle">
+                  <div class="titleLabel">Stepstone Island</div>
+                   <div><small class="text-muted">Spring 2017 - Spring 2018<br>Project Lead, Gameplay Programmer</small></div>
                 </div>
+               <!--  <div class="cardPaddingBody">
+                  <p class="card-text">A mobile fitness game where you help Olly the Osprey clean a trashed and abandoned island though exercise! This game is my MFA in interactive media thesis project and was developed during my last year at the University of Southern California.</p>
+                </div> -->
               </div>
-                <!-- END NAVBAR -->
-                <!-- PROJECTS -->
-                <div id="projects">
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-6 shadow-sm">
+                <a href="project_pages/edDash.html">
+                  <img class="card-img-top " src="images/thumbnails/EdDash_thumb.png" alt="image">
+                </a>
+                <div class="cardPaddingTitle">
+                  <div class="titleLabel">Ed Dashboard Prototype</div>
+                   <div><small class="text-muted">Fall 2017<br>UX Designer</small></div>
+                </div>
+                <!-- <div class="cardPaddingBody">
+                  <p class="card-text">A prototype of a status dashboard created to help emergency department personnel keep track of their performance. This project was lead by Dr. Welmoed Van Deen in association with the USC Gehr Family Center for Health Systems Science.</p>
+                </div> -->
+              </div>
+            </div>
+          <!-- </div> -->
+          <!-- <div class="row"> -->
+            <div class="col-md-4">
+              <div class="card mb-6 shadow-sm">
+                <a href="project_pages/discoBear.html">
+                  <img class="card-img-top " src="images/thumbnails/discoBear_thumb.png" alt="image">
+                </a>
+                <div class="cardPaddingTitle">
+                  <div class="titleLabel">Disco Bear</div>
+                   <div><small class="text-muted">Fall 2016<br>Designer & Gameplay Programmer</small></div>
+                </div>
+                <!-- <div class="cardPaddingBody">
+                  <p class="card-text">An interactive narrative that follows a polar bear through tragedy, depression, and his journey back to the dance floor.</p>
+                </div> -->
+              </div>
+            </div>
+             </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-6 shadow-sm">
+                <a href="project_pages/duos.html">
+                  <img class="card-img-top " src="images/thumbnails/duos_thumb.png" alt="image">
+                </a>
+                <div class="cardPaddingTitle">
+                  <div class="titleLabel">Duos</div>
+                   <div><small class="text-muted">Fall 2016 - Spring 2017<br>Puzzle Designer, Usability Researcher</small></div>
+                </div>
+                <!-- <div class="cardPaddingBody">
+                  <p class="card-text">A 2D puzzle platformer that revolves around two robots, PLAT and MIA, as they navigate through a scrapyard, evade patrols, and escape the grips of destruction.</p>
+                </div> -->
+              </div>
+            </div>
+<!--           </div>
+          <div class="row"> -->
+            <div class="col-md-4">
+              <div class="card mb-6 shadow-sm">
+                <a href="project_pages/archiveTool.html">
+                  <img class="card-img-top " src="images/WebScreencaps/archiveTool_2.png" alt="image">
+                </a>
+                <div class="cardPaddingTitle">
+                  <div class="titleLabel">Wiki Archieve Tool</div>
+                   <div><small class="text-muted">DreamWorks Animation SKG | Summer 2016<br>Designer, Developer</small></div>
+                </div>
+                <!-- <div class="cardPaddingBody">
+                  <p class="card-text">An interactive tool that creates visualizations to aid in archiving wiki pages. This project was created during my second internship at DreamWorks Animation SKG.</p>
+                </div> -->
+              </div>
+            </div>
+             <div class="col-md-4">
+              <div class="card mb-6 shadow-sm">
+                <a href="project_pages/pipelineGame.html">
+                  <img class="card-img-top " src="images/thumbnails/pipeline_thumb.png" alt="image">
+                </a>
+                <div class="cardPaddingTitle">
+                  <div class="titleLabel">The Pipeline Game</div>
+                   <div><small class="text-muted">DreamWorks Animation SKG | Summer 2015 <br>Designer, Developer</small></div>
+                </div>
+                <!-- <div class="cardPaddingBody">
+                  <p class="card-text">A HTML5 canvas drag-and-drop game used to test employee understanding of the DreamWorks animation pipeline. This project was created during my first internship at DreamWorks Animation SKG.</p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </main>
+    <footer class="text-muted bg-greyLightBlue">
+      <div class="container">
+        <p class="smallText">
+          © Katie Pustolski 2019
+        </p>
+      </div>
+    </footer>
 
-        <!--           <div class="container title">
-                    <h2> - Featured Work - </h2>
-                  </div> -->
-
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-4 previewImg">
-                        <a href="projectPages/legoJam.html">
-                          <img src="images/thumbnails/legoJam_thumb.png" alt="img02"/>
-                        </a>
-                      </div>
-                      <div class="col-md-6">
-                          <h2><a href="projectPages/legoJam.html"><span>Building Memories with Lego</span></a></h2>
-                          <h5><span>June 2018<br>
-                          Role: Technical Designer</span></h5>
-                          <p> An augmented reality concept design created for the 2018 Lego + USC AR Game Jam organized by Lego's Creative Play Lab in Los Angeles, California. </p>
-                          <span><a href="projectPages/legoJam.html"><h4>See more here!</h4></a><span>
-                      </div>
-                      <div class="col-md-2 col-xs-12">
-                        <div class="awards">
-                          <ul>
-                           <li><img src="images/badges/trophy_mostComViable_459x250px.png"/></li>
-                            <li><img src="images/badges/trophy_audienChoice_459x250px.png"/></li>
-                          </ul>
-                        </div>
-                      </div> <!-- end col-md-2 -->
-                    </div> <!-- end row-->
-                  </div>
-
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-4 previewImg">
-                        <a href="projectPages/thesis.html">
-                          <img src="images/thumbnails/thesis_thumb.png" alt="img02"/>
-                        </a>
-                      </div>
-                      <div class="col-md-6">
-                          <h2><a href="projectPages/thesis.html"><span>Stepstone Island</span></a></h2>
-                          <h5><span>Spring 2017 - Spring 2018 <br>
-                          Role: Project Lead, Gameplay Programmer</span></h5>
-                          <p> A mobile fitness game where you help Olly the Osprey clean a trashed and abandoned island though exercise!
-                          This game is my MFA in interactive media thesis project and was developed during my last year at the University of Southern California.</p>
-                          <span><a href="projectPages/thesis.html"><h4>See more here!</h4></a><span>
-                      </div>
-                      <div class="col-md-2 col-xs-12">
-                        <div class="awards">
-                          <ul>
-                           <li><a target= "_blank" href="https://www.indiecade.com/"><img src="images/badges/2018_selection_seal_orange_250x250px.png"/></a></li>
-                            <li><a target= "_blank" href="https://itunes.apple.com/us/app/stepstone-island/id1299901028?ls=1&mt=8"><img src="stepstoneislandgame/img/AppleAppStoreBadge.svg"/></a></li>
-                          </ul>
-                        </div>
-                      </div> <!-- end col-md-2 -->
-                    </div> <!-- end row-->
-                  </div>
-
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-4 previewImg">
-                          <a href="projectPages/EdDash.html">
-                            <img src="images/thumbnails/EdDash_thumb.png" alt="img02"/>
-                          </a>
-                        </div>
-                        <div class="col-md-6">
-                            <h2><a href="projectPages/EdDash.html"><span>Emergency Department<br>Dashboard Prototype</span></a></h2>
-                            <h5><span>Fall 2017<br>
-                            Role: UI / UX Designer </span></h5>
-                            <p> A prototype of a status dashboard created to help emergency department personnel keep track of their performance. This project was lead by Dr. Welmoed Van Deen in association with the USC Gehr Family Center for Health Systems Science.  </p>
-                            <span><a href="projectPages/EdDash.html"> <h4>See more here!</h4></a><span>
-                        </div>
-                      </div> <!-- end row-->
-                    </div>
-
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-4 previewImg">
-                          <a href="projectPages/discoBear.html">
-                            <img src="images/thumbnails/discoBear_thumb.png" alt="img02"/>
-                          </a>
-                        </div>
-                        <div class="col-md-5">
-                            <h2><a href="projectPages/discoBear.html"><span>Disco Bear</span></a></h2>
-                            <h5><span>Fall 2016<br>
-                            Role: Designer, Gameplay Programmer</span></h5>
-                            <p> An interactive narrative that follows a polar bear through tragedy, depression, and his journey back to the dance floor. </p>
-                            <span><a href="projectPages/discoBear.html"> <h4>See more here!</h4></a><span>
-                        </div>
-                        <div class="col-md-3 col-xs-12">
-                          <div class="awards">
-                            <!-- <div class="row"> -->
-                              <div class= "col-md-6 col-xs-6">
-                               <a target= "_blank" href="https://www.indiecade.com/"><img src="images/badges/indiecade-seal2017.png"/></a>
-                              </div>
-                              <div class= "col-md-6 col-xs-6">
-                                <a target= "_blank" href="http://www.ign.com/articles/2017/06/13/best-of-e3-2017-awards"><img src="images/badges/award-ign.png"/></a>
-                              </div>
-                            <!-- </div> -->
-                             <!-- <div class="row"> -->
-                              <div class= "col-md-6 col-xs-6">
-                                <a target= "_blank" href="https://www.digitaltrends.com/gaming/best-bears-e3-2017/"><img src="images/badges/award-bestbear.png"/></a>
-                              </div>
-                              <div class= "col-md-6 col-xs-6">
-                                <a target= "_blank" href="https://fantasticarcade.com//games/2017/disco_bear/"><img src="images/badges/award-fantasticArcade.png"/></a>
-                              </div>            
-                            <!-- </div> -->
-                          </div>
-                        </div> <!-- end col-md-2 -->
-                      </div> <!-- end row-->
-                    </div>
-
-                   <div class="container">
-                    <div class="row">
-                      <div class="col-md-4 previewImg">
-                        <a href="projectPages/duos.html">
-                          <img src="images/thumbnails/duos_thumb.png" alt="img02"/>
-                        </a>
-                      </div>
-                      <div class="col-md-6">
-                          <h2><a href="projectPages/duos.html"><span>DuOS</span></a></h2>
-                          <h5><span>Fall 2016-Spring 2017<br>
-                          Role: Producer, Puzzle Designer, Usability Researcher</span></h5>
-                          <p> A 2D puzzle platformer that revolves around two robots, PLAT and MIA, as they navigate through a scrapyard, evade patrols, and escape the grips of destruction. </p>
-                          <span><a href="projectPages/duos.html"><h4>See more here!</h4></a><span>
-                      </div>
-                      <div class="col-md-2 col-xs-12">
-                        <div class="awardsSolo">
-                          <ul>
-                           <li><img src="images/badges/indiePrizeNominee2017.png"/></li>
-                          </ul>
-                        </div>
-                      </div> <!-- end col-md-2 -->
-                    </div>
-                  </div> <!-- end row-->
-
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-4 previewImg">
-                        <a href="projectPages/archivalTool.html">
-                          <img src="images/WebScreencaps/archiveTool_2.png" alt="img02"/>
-                        </a>
-                      </div>
-                      <div class="col-md-6">
-                          <h2><a href="projectPages/archivalTool.html"><span>Wiki Archive Tool<br>for DreamWorks Animation SKG</span></a></h2>
-                          <h5><span>Summer 2016<br>
-                          Role: Designer, Developer</span></h5>
-                          <p> An interactive tool that creates visualizations to aid in archiving wiki pages. This project was created during my second internship at DreamWorks Animation SKG.
-                          </p>
-                          <span><a href="projectPages/archivalTool.html"> <h4>See more here!</h4></a><span>
-                      </div>
-                    </div>
-                  </div> <!-- end row-->
-
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-4 previewImg">
-                        <a href="projectPages/pipelineGame.html">
-                          <img src="images/thumbnails/pipeline_thumb.png" alt="img02"/>
-                        </a>
-                      </div>
-                      <div class="col-md-6">
-                          <h2><a href="projectPages/pipelineGame.html"><span> The Pipeline Game<br>for DreamWorks Animation SKG</span></a></h2>
-                          <h5><span>Summer 2015<br>
-                          Role: Designer, Developer</span></h5>
-                          <p> A HTML5 canvas drag-and-drop game used to test employee understanding of the DreamWorks animation pipeline. This project was created during my first internship at DreamWorks Animation SKG.</p>
-                          <span><a href="projectPages/pipelineGame.html"> <h4>See more here!</h4></a><span>
-                      </div>
-                    </div>
-                  </div> <!-- end row-->
-
-                  <div class="container title">
-                    <h3><a class="blogLink" href = ""> Check out my blog for more! </a> </h3>
-                  </div>
-
-                </div> <!-- end projects -->
-              <!-- END PROJECTS -->
-
-              <!-- FOOTER -->
-              <footer>
-                <ul>
-                  <li><a href="https://twitter.com/ktpierogi"><img src="images/icons/twitter_icon_blue.png" alt="social"/></a></li>
-                  <li><a href="https://www.linkedin.com/in/kathryn-pustolski-518b7552"><img src="images/icons/linkedin_icon_blue.png" alt="social"/></a></li>
-                </ul>
-                <p>&copy; Katie Pustolski 2018</p>
-              </footer>
-              <!-- END FOOTER -->
-
-            </div> <!-- end container -->
-          </div> <!-- END CONTENT -->
-                      <!-- CANVAS -->
-            <!-- <canvas id="spaceShip"></canvas> -->
-      <!-- BOOTSTRAP -->
-      <script src="js/bootstrap.min.js"></script>
-      <!-- MY JS -->
-      <script src="js/myJS.js"></script>
-      <!--<script src="js/spaceShip.js"></script>-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
-
 </html>
